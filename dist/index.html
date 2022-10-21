@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	<head>
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
 				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,8 +9,8 @@
 	<title>Rota: интернет-магазин автозапчастей</title>
 </head>
 
-	<body>
-		<header class="header">
+<body>
+<header class="header">
 	<div class="header__top top-header">
 		<div class="header__container">
 			<div class="top-header__logo logo-header">
@@ -72,43 +72,51 @@
 	</div>
 </header>
 
-		<main class="wrapper">
+<main class="wrapper">
+	<div class="home">
+		<section class="category">
 			<div class="container">
-				<section class="category">
-					<ul class="category__list">
-						<li class="category__item">
-							<a href="/" class="category__link">
-								<svg><use xlink:href="./assets/img/icons/icons.svg#category-oil"></use></svg>
-								Масла и автохимия
-							</a>
-						</li>
-						<li class="category__item">
-							<a href="/" class="category__link">
-								<svg><use xlink:href="./assets/img/icons/icons.svg#category-wheels"></use></svg>
-								Резина и диски
-							</a>
-						</li>
-						<li class="category__item">
-							<a href="/" class="category__link">
-								<svg><use xlink:href="./assets/img/icons/icons.svg#category-accumulator"></use></svg>
-								Аккумуляторы
-							</a>
-						</li>
-						<li class="category__item">
-							<a href="/" class="category__link">
-								<svg><use xlink:href="./assets/img/icons/icons.svg#category-wrench"></use></svg>
-								Расходники
-							</a>
-						</li>
-					</ul>
-				</section>
-
-
-				<section class="info"></section>
-				<section class="news"></section>
+				<ul class="category__list">
+					<li class="category__item">
+						<a href="/" class="category__link">
+							<svg>
+								<use xlink:href="./assets/img/icons/icons.svg#category-oil"></use>
+							</svg>
+							Масла и автохимия
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="/" class="category__link">
+							<svg>
+								<use xlink:href="./assets/img/icons/icons.svg#category-wheels"></use>
+							</svg>
+							Резина и диски
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="/" class="category__link">
+							<svg>
+								<use xlink:href="./assets/img/icons/icons.svg#category-accumulator"></use>
+							</svg>
+							Аккумуляторы
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="/" class="category__link">
+							<svg>
+								<use xlink:href="./assets/img/icons/icons.svg#category-wrench"></use>
+							</svg>
+							Расходники
+						</a>
+					</li>
+				</ul>
 			</div>
-		</main>
-		<footer class="footer">
+		</section>
+		<section class="info"></section>
+		<section class="news"></section>
+	</div>
+</main>
+<footer class="footer">
 	<div class="container">
 		<nav class="footer__navigation navigation-footer">
 			<ul class="navigation-footer__list">
@@ -173,6 +181,6 @@
 	</div>
 </footer>
 
-		<script src='js/app.min.js'></script>
-	</body>
+<script src="js/app.min.js"></script>
+</body>
 </html>
