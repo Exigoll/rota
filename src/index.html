@@ -6,6 +6,40 @@
 	<body>
 		@@include('html/header.html', {})
 		<main class="wrapper">
+			<div class="container">
+				<section class="category">
+					<ul class="category__list">
+						<li class="category__item">
+							<a href="/" class="category__link">
+								<svg><use xlink:href="./assets/img/icons/icons.svg#category-oil"></use></svg>
+								Масла и автохимия
+							</a>
+						</li>
+						<li class="category__item">
+							<a href="/" class="category__link">
+								<svg><use xlink:href="./assets/img/icons/icons.svg#category-wheels"></use></svg>
+								Резина и диски
+							</a>
+						</li>
+						<li class="category__item">
+							<a href="/" class="category__link">
+								<svg><use xlink:href="./assets/img/icons/icons.svg#category-accumulator"></use></svg>
+								Аккумуляторы
+							</a>
+						</li>
+						<li class="category__item">
+							<a href="/" class="category__link">
+								<svg><use xlink:href="./assets/img/icons/icons.svg#category-wrench"></use></svg>
+								Расходники
+							</a>
+						</li>
+					</ul>
+				</section>
+
+
+				<section class="info"></section>
+				<section class="news"></section>
+			</div>
 		</main>
 		@@include('html/footer.html', {})
 		<script src='js/app.min.js'></script>

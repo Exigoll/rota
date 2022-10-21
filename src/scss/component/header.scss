@@ -78,15 +78,40 @@
 	background-color: #cfcdcd;
 }
 
-.menu-header {
-	&__button {
-		padding-right: 20px;
+.contacts-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 10px;
+	max-width: 200px;
+	width: 100%;
+	height: 70px;
+
+	&__link {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		font-size: 18px;
+		line-height: 19px;
 		font-weight: 700;
-		font-size: 20px;
-		line-height: 24px;
-		cursor: pointer;
-		background: url(../assets/img/svg/triangle-small.svg) no-repeat center
-			right/10px;
+		transition: all 0.5s ease;
+
+		&:hover {
+			svg {
+				fill: rgba(0, 0, 0, 0.5);
+				transform: scale(1.1);
+			}
+		}
+
+		&:active {
+			transform: scale(0.9);
+		}
+
+		svg {
+			width: 24px;
+			height: 20px;
+			transition: all 0.5s ease;
+		}
 	}
 }
 
@@ -121,6 +146,8 @@
 	}
 
 	button {
+		width: 100%;
+		max-width: 120px;
 		height: 100%;
 		padding: 25px 34px;
 		background-color: #2ea132;
