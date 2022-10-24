@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en">
-	<head>
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
 				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/style.min.css?_v=20221017234138">
+	<link rel="stylesheet" href="css/style.min.css">
 	<title>Rota: интернет-магазин автозапчастей</title>
 </head>
 
-	<body>
-		<header class="header">
+<body>
+<header class="header">
 	<div class="header__top top-header">
 		<div class="header__container">
 			<div class="top-header__logo logo-header">
@@ -44,8 +44,15 @@
 	</div>
 	<div class="header__bottom bottom-header">
 		<div class="header__container">
-			<div class="bottom-header__menu menu-header">
-				<button class="menu-header__button" type="button">Каталог деталей</button>
+			<div class="bottom-header__contacts contacts-header">
+				<a class="contacts-header__link" href="tel:+79029999999">
+					<svg><use xlink:href="./assets/img/icons/icons.svg#phone"></use></svg>
+					+7-902-99-99-999
+				</a>
+				<a class="contacts-header__link" href="mailto:pirates@mail.ru">
+					<svg><use xlink:href="./assets/img/icons/icons.svg#mail"></use></svg>
+					pirates@mail.ru
+				</a>
 			</div>
 			<div class="bottom-header__search search-header">
 				<input type="text" placeholder="Введите VIN номер / наименование датели">
@@ -65,10 +72,147 @@
 	</div>
 </header>
 
-		<main class="wrapper">
-		</main>
-		<footer></footer>
+<main class="wrapper">
+	<div class="home">
+		<section class="category">
+			<div class="container">
+				<ul class="category__list">
+					<li class="category__item">
+						<a href="/" class="category__link">
+							<svg>
+								<use xlink:href="./assets/img/icons/icons.svg#category-oil"></use>
+							</svg>
+							Масла и автохимия
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="/" class="category__link">
+							<svg>
+								<use xlink:href="./assets/img/icons/icons.svg#category-wheels"></use>
+							</svg>
+							Резина и диски
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="/" class="category__link">
+							<svg>
+								<use xlink:href="./assets/img/icons/icons.svg#category-accumulator"></use>
+							</svg>
+							Аккумуляторы
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="/" class="category__link">
+							<svg>
+								<use xlink:href="./assets/img/icons/icons.svg#category-wrench"></use>
+							</svg>
+							Расходники
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="info">
+			<div class="container">
+				<div class="swiper info__slider slider-info">
+					<div class="swiper-wrapper slider-info__wrapper">
+						<div class="swiper-slide slider-info__slide">
+							<img src="./assets/img/slider-5.jpg" alt="wheels">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, harum.</p>
+						</div>
+						<div class="swiper-slide slider-info__slide">
+							<img src="./assets/img/slider-6.jpg" alt="wheels">
+							<p>Доставим в любую точку России и страны бывшего СНГ</p>
+						</div>
+						<div class="swiper-slide slider-info__slide">
+							<img src="./assets/img/slider-1.jpg" alt="wheels">
+							<p>Диски и шины от лучших производителей</p>
+						</div>
+						<div class="swiper-slide slider-info__slide">
+							<img src="./assets/img/slider-2.jpg" alt="wheels">
+							<p>я здесь ищу только одного - покоя</p>
+						</div>
+						<div class="swiper-slide slider-info__slide">
+							<img src="./assets/img/slider-3.jpg" alt="wheels">
+							<p>мне этот мир абсолютно	понятен</p>
+						</div>
+						<div class="swiper-slide slider-info__slide">
+							<img src="./assets/img/slider-4.jpg" alt="wheels">
+							<p>Не нашли нужную запчасть? Пишите или звоните! <br> Мы поможем найти!</p>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<section class="news"></section>
+	</div>
+</main>
+<footer class="footer">
+	<div class="container">
+		<nav class="footer__navigation navigation-footer">
+			<ul class="navigation-footer__list">
+				<h3 class="navigation-footer__title">Сервис для клиентов</h3>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Доставка
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						ЭДО
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Гарантия и возврат
+					</a>
+				</li>
+			</ul>
+			<ul class="navigation-footer__list">
+				<h3 class="navigation-footer__title">Информация</h3>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Поставщикам
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Оптовым клиентам
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Техническая поддержка
+					</a>
+				</li>
+			</ul>
+			<ul class="navigation-footer__list">
+				<h3 class="navigation-footer__title">Контакты</h3>
+				<li class="navigation-footer__item">
+					<a class="navigation-footer__link" href="https://yandex.ru/maps/-/CCUZNUD1PB" target="_blank">
+						<svg><use xlink:href="./assets/img/icons/icons.svg#marker"></use></svg>
+						г. Москва, ул. Ленина, 32, офис 404, 614055
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						<svg><use xlink:href="./assets/img/icons/icons.svg#phone"></use></svg>
+						+7-999-99-99-99
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						<svg><use xlink:href="./assets/img/icons/icons.svg#mail"></use></svg>
+						pirates@mail.ru
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<p class="copyrights">© 2022 pirates.com - Интернет-магазин запчастей для иномарок</p>
+	</div>
+</footer>
 
-		<script src='js/app.min.js?_v=20221017234138'></script>
-	</body>
+<script src="js/app.min.js"></script>
+</body>
 </html>

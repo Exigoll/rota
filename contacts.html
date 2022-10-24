@@ -5,7 +5,7 @@
 	<meta name="viewport"
 				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/style.min.css?_v=20221017234138">
+	<link rel="stylesheet" href="css/style.min.css">
 	<title>О нас</title>
 </head>
 
@@ -44,8 +44,15 @@
 	</div>
 	<div class="header__bottom bottom-header">
 		<div class="header__container">
-			<div class="bottom-header__menu menu-header">
-				<button class="menu-header__button" type="button">Каталог деталей</button>
+			<div class="bottom-header__contacts contacts-header">
+				<a class="contacts-header__link" href="tel:+79029999999">
+					<svg><use xlink:href="./assets/img/icons/icons.svg#phone"></use></svg>
+					+7-902-99-99-999
+				</a>
+				<a class="contacts-header__link" href="mailto:pirates@mail.ru">
+					<svg><use xlink:href="./assets/img/icons/icons.svg#mail"></use></svg>
+					pirates@mail.ru
+				</a>
 			</div>
 			<div class="bottom-header__search search-header">
 				<input type="text" placeholder="Введите VIN номер / наименование датели">
@@ -68,8 +75,71 @@
 <main class="wrapper">
 Контакты
 </main>
-<footer></footer>
+<footer class="footer">
+	<div class="container">
+		<nav class="footer__navigation navigation-footer">
+			<ul class="navigation-footer__list">
+				<h3 class="navigation-footer__title">Сервис для клиентов</h3>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Доставка
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						ЭДО
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Гарантия и возврат
+					</a>
+				</li>
+			</ul>
+			<ul class="navigation-footer__list">
+				<h3 class="navigation-footer__title">Информация</h3>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Поставщикам
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Оптовым клиентам
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						Техническая поддержка
+					</a>
+				</li>
+			</ul>
+			<ul class="navigation-footer__list">
+				<h3 class="navigation-footer__title">Контакты</h3>
+				<li class="navigation-footer__item">
+					<a class="navigation-footer__link" href="https://yandex.ru/maps/-/CCUZNUD1PB" target="_blank">
+						<svg><use xlink:href="./assets/img/icons/icons.svg#marker"></use></svg>
+						г. Москва, ул. Ленина, 32, офис 404, 614055
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						<svg><use xlink:href="./assets/img/icons/icons.svg#phone"></use></svg>
+						+7-999-99-99-99
+					</a>
+				</li>
+				<li class="navigation-footer__item">
+					<a href="/" class="navigation-footer__link">
+						<svg><use xlink:href="./assets/img/icons/icons.svg#mail"></use></svg>
+						pirates@mail.ru
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<p class="copyrights">© 2022 pirates.com - Интернет-магазин запчастей для иномарок</p>
+	</div>
+</footer>
 
-<script src='js/app.min.js?_v=20221017234138'></script>
+<script src='js/app.min.js'></script>
 </body>
 </html>
