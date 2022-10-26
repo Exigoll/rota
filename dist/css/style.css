@@ -1125,7 +1125,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 14px;
-  color: #000;
+  color: #1d2223;
   background-color: #fff;
 }
 
@@ -1303,6 +1303,9 @@ main {
 .navigation-header__item {
   transition: all 0.5s ease;
 }
+.navigation-header__item:hover {
+  transform: scale(0.95);
+}
 .navigation-header__item:active {
   transform: scale(0.9);
 }
@@ -1311,7 +1314,7 @@ main {
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 @media (max-width: 1680px) {
   .navigation-header__link {
@@ -1345,14 +1348,18 @@ main {
   display: flex;
   align-items: center;
   column-gap: 10px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 19px;
   font-weight: 700;
-  color: #2e3536;
+  color: #000;
+  opacity: 0.7;
   transition: all 0.5s ease;
 }
+.contacts-header__link:hover {
+  opacity: 1;
+}
 .contacts-header__link:hover svg {
-  fill: rgba(0, 0, 0, 0.5);
+  opacity: 1;
   transform: scale(1.1);
 }
 .contacts-header__link:active {
@@ -1361,6 +1368,8 @@ main {
 .contacts-header__link svg {
   width: 24px;
   height: 20px;
+  fill: #000;
+  opacity: 0.7;
   transition: all 0.5s ease;
 }
 
@@ -1375,9 +1384,13 @@ main {
   width: 100%;
   height: 100%;
   padding: 0 20px;
-  background-color: #fff;
-  border-radius: 20px 0 0 20px;
   border: 3px solid transparent;
+  border-radius: 20px 0 0 20px;
+  background-color: #fff;
+  color: #1d2223;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 .search-header input:focus, .search-header input:hover {
@@ -1402,11 +1415,11 @@ main {
   line-height: 19px;
   color: #fff;
   cursor: pointer;
-  opacity: 1;
   transition: all 0.5s ease;
 }
 .search-header button:hover {
-  opacity: 0.8;
+  background-color: #f76435;
+  transform: scale(0.99);
 }
 .search-header button:active {
   transform: scale(0.9);
@@ -1439,15 +1452,15 @@ main {
   row-gap: 5px;
   width: 110px;
   padding: 12px 20px;
-  background-color: #2e3536;
-  color: #fff;
-  opacity: 1;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 0.9;
   transition: all 0.5s ease;
 }
 .office-btn svg {
   width: 30px;
   height: 30px;
-  fill: #fff;
+  fill: rgba(255, 255, 255, 0.3);
   transition: all 0.5s ease;
 }
 .office-btn span {
@@ -1455,7 +1468,12 @@ main {
   line-height: 14px;
 }
 .office-btn:hover {
-  opacity: 0.8;
+  color: #fff;
+  opacity: 1;
+  transform: scale(0.99);
+}
+.office-btn:hover svg {
+  fill: #fff;
 }
 .office-btn:active {
   transform: scale(0.9);
