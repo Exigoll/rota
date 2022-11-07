@@ -1503,6 +1503,7 @@ main {
 }
 
 .navigation-footer {
+  color: inherit;
   padding-top: 30px;
   padding-bottom: 20px;
 }
