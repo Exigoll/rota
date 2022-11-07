@@ -1503,47 +1503,54 @@ main {
 }
 
 .navigation-footer {
-  display: flex;
-  justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 20px;
 }
-.navigation-footer__list {
+
+.list-footer {
   display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  max-width: 400px;
-  width: 100%;
+  justify-content: space-between;
 }
-.navigation-footer__title {
-  margin-bottom: 10px;
+.list-footer__title {
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
 }
-.navigation-footer__link {
+.list-footer__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.sublist-footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.sublist-footer__link {
   display: flex;
   align-items: center;
   font-size: 16px;
   line-height: 20px;
   transition: all 0.5s ease;
 }
-.navigation-footer__link svg {
+.sublist-footer__link svg {
   width: 20px;
   height: 20px;
   margin-right: 10px;
   fill: #fff;
   transition: all 0.5s ease;
 }
-.navigation-footer__link:hover {
+.sublist-footer__link:hover {
   color: #e77c58;
   transform: scaleX(0.99);
 }
-.navigation-footer__link:hover svg {
+.sublist-footer__link:hover svg {
   fill: #e77c58;
   transform: scale(1.5);
 }
-.navigation-footer__link:active {
+.sublist-footer__link:active {
   transform: scaleX(0.97);
 }
 
