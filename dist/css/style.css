@@ -1121,6 +1121,7 @@ body {
 }
 
 body {
+  position: relative;
   font-family: "Proxima Nova", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1174,6 +1175,7 @@ main {
 .wrapper {
   min-height: 100%;
   margin: 0 auto;
+  padding-top: 200px;
 }
 
 .container {
@@ -1194,8 +1196,10 @@ main {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100;
 }
 
