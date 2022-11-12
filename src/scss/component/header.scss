@@ -180,6 +180,7 @@
 			padding-top: 100px;
 			padding-left: 30px;
 			padding-right: 30px;
+			z-index: 1;
 
 			&._active {
 				right: 0;
@@ -234,6 +235,10 @@
 				font-size: 16px;
 				line-height: 20px;
 			}
+
+			&:active {
+				transform: scale(0.9);
+			}
 		}
 	}
 }
@@ -245,14 +250,29 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		column-gap: 50px;
 		max-width: 1475px;
 		@include adaptive-value-tablet("height", 100, 75, 1);
 		margin: 0 auto;
 		padding: 0 20px;
 
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("column-gap", 50, 30, 0);
+		}
+
 		@media (max-width: em(768)) {
+			flex-wrap: wrap;
+			justify-content: space-between;
+			height: 100%;
+			row-gap: 20px;
+			@include adaptive-value-mobile("padding-top", 20, 10, 0);
 			@include adaptive-value-mobile("padding-right", 20, 10, 0);
+			@include adaptive-value-mobile("padding-bottom", 20, 10, 0);
 			@include adaptive-value-mobile("padding-left", 20, 10, 0);
+		}
+
+		@media (max-width: em(320)) {
+			padding: 10px;
 		}
 	}
 }
@@ -260,44 +280,100 @@
 .contacts-header {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	align-items: flex-start;
 	row-gap: 10px;
 	max-width: 170px;
 	width: 100%;
-	height: 70px;
 
-	a:nth-child(2n) {
-		width: 86%;
+	@media (max-width: em(1024)) {
+		@include adaptive-value-tablet("max-width", 170, 148, 1);
+	}
+
+	@media (max-width: em(768)) {
+		order: 1;
+		@include adaptive-value-mobile("column-gap", 20, 15, 0);
+		max-width: 45%;
+	}
+
+	@media (max-width: em(360)) {
+		flex-direction: row;
+		max-width: 23%;
+		justify-content: space-between;
 	}
 
 	&__link {
 		display: flex;
 		align-items: center;
 		column-gap: 10px;
-		font-size: 16px;
-		line-height: 19px;
-		font-weight: 700;
-		color: #2e3536;
 		transition: all 0.5s ease;
 
-		&:hover {
-			color: #e77c58;
+		svg {
+			@include adaptive-value-desktop("width", 24, 20, 1);
+			@include adaptive-value-desktop("height", 20, 16, 1);
+			fill: $colorLightDark;
+			transition: all 0.5s ease;
 
+			@media (max-width: em(1024)) {
+				width: 20px;
+				height: 16px;
+			}
+
+			@media (max-width: em(768)) {
+				@include adaptive-value-mobile("width", 30, 20, 0);
+				@include adaptive-value-mobile("height", 26, 16, 0);
+			}
+
+			@media (max-width: em(360)) {
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		span {
+			display: block;
+			@include adaptive-value-desktop("font-size", 16, 14, 1);
+			@include adaptive-value-desktop("line-height", 19, 17, 1);
+			font-weight: 700;
+			color: $colorLightDark;
+			transition: all 0.5s ease;
+
+			@media (max-width: em(1024)) {
+				font-size: 14px;
+				line-height: 17px;
+			}
+
+			@media (max-width: em(768)) {
+				@include adaptive-value-mobile("font-size", 14, 12, 1);
+				@include adaptive-value-mobile("line-height", 17, 15, 1);
+			}
+
+			@media (max-width: em(360)) {
+				display: none;
+			}
+		}
+
+		&:hover {
 			svg {
-				fill: #e77c58;
+				fill: $colorPeach;
 				transform: scale(1.5);
+
+				@media (max-width: em(768)) {
+					fill: $colorLightDark;
+					transform: none;
+				}
+			}
+
+			span {
+				color: $colorPeach;
 			}
 		}
 
 		&:active {
 			transform: scale(0.9);
-		}
 
-		svg {
-			width: 24px;
-			height: 20px;
-			fill: #2e3536;
-			transition: all 0.5s ease;
+			svg {
+				transform: scale(0.9);
+			}
 		}
 	}
 }
@@ -305,22 +381,61 @@
 .search-header {
 	display: flex;
 	align-items: center;
-	max-width: 600px;
+	@include adaptive-value-desktop("max-width", 600, 420, 0);
 	width: 100%;
-	height: 70px;
+
+	@media (max-width: em(1024)) {
+		@include adaptive-value-tablet("max-width", 420, 320, 0);
+	}
+
+	@media (max-width: em(768)) {
+		order: 3;
+		max-width: 100%;
+	}
 
 	input {
+		@include adaptive-value-desktop("max-width", 480, 320, 1);
 		width: 100%;
-		height: 100%;
-		padding: 0 20px;
+		@include adaptive-value-desktop("padding-top", 22, 15.75, 1);
+		padding-right: 10px;
+		@include adaptive-value-desktop("padding-bottom", 22, 15.75, 1);
+		padding-left: 20px;
+		@include adaptive-value-desktop("border-top-left-radius", 20, 18, 1);
+		@include adaptive-value-desktop("border-bottom-left-radius", 20, 18, 1);
 		border: 3px solid transparent;
-		border-radius: 20px 0 0 20px;
 		background-color: $colorWhite;
 		color: $colorLightDark;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 20px;
 		font-weight: 700;
 		transition: all 0.3s ease;
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("max-width", 320, 240, 0);
+			@include adaptive-value-tablet("padding-top", 15.75, 11, 0);
+			@include adaptive-value-tablet("padding-bottom", 15.75, 11, 0);
+			@include adaptive-value-tablet("border-top-left-radius", 18, 15, 0);
+			@include adaptive-value-tablet("border-bottom-left-radius", 18, 15, 0);
+			@include adaptive-value-tablet("font-size", 16, 14, 0);
+			@include adaptive-value-tablet("line-height", 20, 18, 0);
+		}
+
+		@media (max-width: em(768)) {
+			max-width: 100%;
+			@include adaptive-value-mobile("padding-top", 11, 7.5, 0);
+			@include adaptive-value-mobile("padding-bottom", 11, 7.5, 0);
+			@include adaptive-value-mobile("border-top-left-radius", 15, 10, 0);
+			@include adaptive-value-mobile("border-bottom-left-radius", 15, 10, 0);
+			@include adaptive-value-mobile("font-size", 14, 12, 0);
+			@include adaptive-value-mobile("line-height", 18, 15, 0);
+		}
+
+		@media (max-width: em(320)) {
+			padding: 7.5px 20px;
+			border-radius: 10px 0 0 10px;
+			font-size: 12px;
+			line-height: 15px;
+		}
 
 		&:focus,
 		&:hover {
@@ -332,26 +447,75 @@
 			font-weight: 700;
 			font-size: 16px;
 			line-height: 19px;
-			color: rgba(0, 0, 0, 0.3);
+			color: $colorBlackPlaceholder;
+
+			@media (max-width: em(1024)) {
+				@include adaptive-value-tablet("font-size", 16, 14, 1);
+				@include adaptive-value-tablet("line-height", 19, 17, 1);
+			}
+
+			@media (max-width: em(768)) {
+				@include adaptive-value-mobile("font-size", 14, 12, 1);
+				@include adaptive-value-mobile("line-height", 17, 15, 1);
+			}
+
+			@media (max-width: em(320)) {
+				font-size: 12px;
+				line-height: 15px;
+			}
 		}
 	}
 
 	button {
+		@include adaptive-value-desktop("max-width", 120, 100, 1);
 		width: 100%;
-		max-width: 120px;
-		height: 100%;
-		padding: 25px 34px;
+		@include adaptive-value-desktop("padding-top", 25, 18.75, 1);
+		@include adaptive-value-desktop("padding-right", 34, 25.5, 1);
+		@include adaptive-value-desktop("padding-bottom", 25, 18.75, 1);
+		@include adaptive-value-desktop("padding-left", 34, 25.5, 1);
 		background-color: $colorPeach;
-		border-radius: 0 20px 20px 0;
+		@include adaptive-value-desktop("border-top-right-radius", 20, 18, 1);
+		@include adaptive-value-desktop("border-bottom-right-radius", 20, 18, 1);
 		font-weight: 700;
 		font-size: 16px;
-		line-height: 19px;
+		line-height: 20px;
 		color: $colorWhite;
 		cursor: pointer;
 		transition: all 0.5s ease;
 
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("max-width", 100, 80, 0);
+			@include adaptive-value-tablet("padding-top", 18.75, 14, 0);
+			@include adaptive-value-tablet("padding-right", 25.5, 19, 0);
+			@include adaptive-value-tablet("padding-bottom", 18.75, 14, 0);
+			@include adaptive-value-tablet("padding-left", 25.5, 19, 0);
+			@include adaptive-value-tablet("border-top-right-radius", 18, 15, 0);
+			@include adaptive-value-tablet("border-bottom-right-radius", 18, 15, 0);
+			@include adaptive-value-tablet("font-size", 16, 14, 0);
+			@include adaptive-value-tablet("line-height", 20, 18, 0);
+		}
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("max-width", 80, 70, 0);
+			@include adaptive-value-mobile("padding-top", 14, 10.5, 0);
+			@include adaptive-value-mobile("padding-right", 19, 14.25, 0);
+			@include adaptive-value-mobile("padding-bottom", 14, 10.5, 0);
+			@include adaptive-value-mobile("padding-left", 19, 14.25, 0);
+			@include adaptive-value-mobile("border-top-right-radius", 15, 10, 0);
+			@include adaptive-value-mobile("border-bottom-right-radius", 15, 10, 0);
+			@include adaptive-value-mobile("font-size", 14, 12, 0);
+			@include adaptive-value-mobile("line-height", 18, 15, 0);
+		}
+
+		@media (max-width: em(320)) {
+			padding: 10.5px 14.25px;
+			border-radius: 0 10px 10px 0;
+			font-size: 12px;
+			line-height: 15px;
+		}
+
 		&:hover {
-			background-color: #f76435;
+			background-color: $colorPeachActive;
 			transform: scale(0.99);
 		}
 
@@ -365,20 +529,39 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	max-width: 220px;
+	@include adaptive-value-desktop("max-width", 221, 201, 1);
 	width: 100%;
-	height: 70px;
+
+	@media (max-width: em(1024)) {
+		@include adaptive-value-tablet("max-width", 201, 181, 1);
+	}
+
+	@media (max-width: em(768)) {
+		max-width: 181px;
+		order: 2;
+	}
 
 	&:after {
 		content: "";
 		position: absolute;
-		top: 36px;
-		left: 90px;
-		width: 40px;
+		@include adaptive-value-desktop("top", 36, 28, 1);
+		@include adaptive-value-desktop("left", 90, 85, 1);
+		@include adaptive-value-desktop("width", 40, 30, 1);
 		height: 1px;
 		background-color: rgba(255, 255, 255, 0.3);
 		transform: rotate(90deg);
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("top", 28, 22, 1);
+			@include adaptive-value-tablet("left", 85, 78, 1);
+			@include adaptive-value-tablet("width", 30, 24, 1);
+		}
+
+		@media (max-width: em(768)) {
+			top: 22px;
+			left: 78px;
+			width: 24px;
+		}
 	}
 }
 
@@ -386,23 +569,60 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	row-gap: 5px;
-	width: 110px;
-	padding: 12px 20px;
-	background-color: #2e3536;
+	row-gap: 2px;
+	@include adaptive-value-desktop("max-width", 110, 100, 1);
+	width: 100%;
+	@include adaptive-value-desktop("padding-top", 12, 8.75, 1);
+	@include adaptive-value-desktop("padding-right", 14.5, 8.5, 1);
+	@include adaptive-value-desktop("padding-bottom", 12, 8.75, 1);
+	@include adaptive-value-desktop("padding-left", 14.5, 8.5, 1);
+	background-color: $colorLightDark;
 	color: $colorWhite;
 	transition: all 0.5s ease;
 
+	@media (max-width: em(1024)) {
+		@include adaptive-value-tablet("max-width", 100, 90, 0);
+		@include adaptive-value-tablet("padding-top", 8.75, 5, 0);
+		@include adaptive-value-tablet("padding-right", 8.5, 8.5, 0);
+		@include adaptive-value-tablet("padding-bottom", 8.75, 5, 0);
+		@include adaptive-value-tablet("padding-left", 8.5, 8.5, 0);
+	}
+
+	@media (max-width: em(768)) {
+		max-width: 90px;
+		padding: 6px 8.5px;
+	}
+
 	svg {
-		width: 30px;
-		height: 30px;
-		fill: rgb(255, 255, 255);
+		@include adaptive-value-desktop("width", 30, 24, 1);
+		@include adaptive-value-desktop("height", 30, 24, 1);
+		fill: $colorWhite;
 		transition: all 0.5s ease;
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("width", 24, 20, 0);
+			@include adaptive-value-tablet("height", 24, 20, 0);
+		}
+
+		@media (max-width: em(768)) {
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	span {
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 14px;
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("font-size", 14, 12, 0);
+			@include adaptive-value-tablet("line-height", 14, 12, 0);
+		}
+
+		@media (max-width: em(768)) {
+			font-size: 12px;
+			line-height: 12px;
+		}
 	}
 
 	&:hover {
@@ -415,10 +635,32 @@
 	}
 
 	&--right {
-		border-radius: 20px 0 0 20px;
+		@include adaptive-value-desktop("border-top-left-radius", 20, 18, 1);
+		@include adaptive-value-desktop("border-bottom-left-radius", 20, 18, 1);
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("border-top-left-radius", 18, 15, 0);
+			@include adaptive-value-tablet("border-bottom-left-radius", 18, 15, 0);
+		}
+
+		@media (max-width: em(768)) {
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px;
+		}
 	}
 
 	&--left {
-		border-radius: 0 20px 20px 0;
+		@include adaptive-value-desktop("border-top-right-radius", 20, 18, 1);
+		@include adaptive-value-desktop("border-bottom-right-radius", 20, 18, 1);
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("border-top-right-radius", 18, 15, 0);
+			@include adaptive-value-tablet("border-bottom-right-radius", 18, 15, 0);
+		}
+
+		@media (max-width: em(768)) {
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
+		}
 	}
 }
