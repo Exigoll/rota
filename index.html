@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-				content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport"	content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="apple-touch-icon" sizes="180x180" href="files/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="files/favicon-32x32.png">
@@ -19,58 +18,62 @@
 <body>
 <header class="header">
 	<div class="header__top top-header">
-		<div class="header__container">
-			<div class="top-header__logo logo-header">
-				<a href="./">
-					<svg>
-						<use xlink:href="./assets/img/icons/icons.svg#logo"></use>
-					</svg>
-					<h1>Rota-ZAP</h1>
-				</a>
+		<div class="top-header__container">
+			<a class="top-header__logo logo-header" href="./">
+				<svg class="logo-header__img">
+					<use xlink:href="./assets/img/icons/icons.svg#logo"></use>
+				</svg>
+				<h1 class="logo-header__title">Rota-ZAP</h1>
+			</a>
+			<div class="top-header__navigation navigation-header">
+				<div class="navigation-header__icon">
+					<span></span>
+				</div>
+				<nav class="navigation-header__menu menu-header">
+					<ul class="menu-header__list">
+						<li class="menu-header__item">
+							<a class="menu-header__link" href="./">Главная</a>
+						</li>
+						<li class="menu-header__item">
+							<a class="menu-header__link" href="./about.html">О нас</a>
+						</li>
+						<li class="menu-header__item">
+							<a class="menu-header__link" href="./provider.html">Поставщикам</a>
+						</li>
+						<li class="menu-header__item">
+							<a class="menu-header__link" href="./wholesale.html">Для оптовых клиентов</a>
+						</li>
+						<li class="menu-header__item">
+							<a class="menu-header__link" href="./contacts.html">Контакты</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
-			<nav class="top-header__navigation navigation-header">
-				<ul class="navigation-header__list">
-					<li class="navigation-header__item">
-						<a class="navigation-header__link navigation-header__link--active" href="./">Главная</a>
-					</li>
-					<li class="navigation-header__item">
-						<a class="navigation-header__link" href="./about.html">О нас</a>
-					</li>
-					<li class="navigation-header__item">
-						<a class="navigation-header__link" href="./provider.html">Поставщикам</a>
-					</li>
-					<li class="navigation-header__item">
-						<a class="navigation-header__link" href="./wholesale.html">Для оптовых клиентов</a>
-					</li>
-					<li class="navigation-header__item">
-						<a class="navigation-header__link" href="./contacts.html">Контакты</a>
-					</li>
-				</ul>
-			</nav>
+
 		</div>
 	</div>
 	<div class="header__bottom bottom-header">
-		<div class="header__container">
+		<div class="bottom-header__container">
 			<div class="bottom-header__contacts contacts-header">
 				<a class="contacts-header__link" href="tel:+79029999999">
 					<svg><use xlink:href="./assets/img/icons/icons.svg#phone"></use></svg>
-					+7-902-99-99-999
+					<span>+7-902-99-99-999</span>
 				</a>
 				<a class="contacts-header__link" href="mailto:pirates@mail.ru">
 					<svg><use xlink:href="./assets/img/icons/icons.svg#mail"></use></svg>
-					pirates@mail.ru
+					<span>pirates@mail.ru</span>
 				</a>
 			</div>
 			<div class="bottom-header__search search-header">
-				<input type="text" placeholder="Введите VIN номер / наименование детали">
+				<input type="text" placeholder="Введите VIN номер детали">
 				<button type="submit">Найти</button>
 			</div>
 			<div class="bottom-header__office office-header">
-				<a class="office-btn office-btn--right" href="">
+				<a class="office-btn office-btn--right" href="#">
 					<svg><use xlink:href="./assets/img/icons/icons.svg#login"></use></svg>
 					<span>Вход</span>
 				</a>
-				<a class="office-btn office-btn--left" href="">
+				<a class="office-btn office-btn--left" href="#">
 					<svg><use xlink:href="./assets/img/icons/icons.svg#registration"></use></svg>
 					<span>Регистрация</span>
 				</a>
@@ -81,7 +84,7 @@
 
 <main class="wrapper">
 	<div class="home">
-		<section class="category">
+		<!--<section class="category">
 			<div class="container">
 				<ul class="category__list">
 					<li class="category__item">
@@ -118,8 +121,8 @@
 					</li>
 				</ul>
 			</div>
-		</section>
-		<section class="info">
+		</section>-->
+		<!--<section class="info">
 			<div class="container">
 				<div class="swiper info__slider slider-info">
 					<div class="swiper-wrapper slider-info__wrapper">
@@ -151,8 +154,8 @@
 					<div class="swiper-pagination"></div>
 				</div>
 			</div>
-		</section>
-		<section class="news">
+		</section>-->
+		<!--<section class="news">
 			<div class="container">
 				<h3 class="news__title title-news">Новости компании</h3>
 				<ul class="news__list">
@@ -197,10 +200,10 @@
 					</li>
 				</ul>
 			</div>
-		</section>
+		</section>-->
 	</div>
 </main>
-<footer class="footer">
+<!--<footer class="footer">
 	<div class="container">
 		<nav class="footer__navigation navigation-footer">
 			<ul class="navigation-footer__list list-footer">
@@ -259,7 +262,7 @@
 		</nav>
 		<p class="copyrights">© 2022 pirates.com - Интернет-магазин запчастей для иномарок</p>
 	</div>
-</footer>
+</footer>-->
 
 <script src="js/app.min.js"></script>
 </body>
