@@ -9,48 +9,115 @@
 .category {
 	padding: 50px 0;
 
+	@media (max-width: em(768)) {
+		@include adaptive-value-mobile("padding-top", 50, 30, 1);
+		@include adaptive-value-mobile("padding-bottom", 50, 30, 1);
+	}
+
+	@media (max-width: em(320)) {
+		padding: 30px 0;
+	}
+
 	&__list {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		max-width: 1160px;
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+		@include adaptive-value-desktop("grid-column-gap", 80, 30, 1);
+		@include adaptive-value-desktop("max-width", 1120, 840, 1);
 		width: 100%;
 		margin: 0 auto;
-		padding: 0 20px;
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("grid-column-gap", 30, 20, 0);
+			@include adaptive-value-tablet("max-width", 840, 728, 0);
+		}
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("max-width", 728, 300, 0);
+			grid-column-gap: 20px;
+		}
+
+		@media (max-width: em(706)) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			@include adaptive-value-mobile("grid-column-gap", 40, 20, 0);
+			grid-row-gap: 20px;
+		}
+
+		@media (max-width: em(320)) {
+			max-width: 300px;
+			grid-column-gap: 20px;
+		}
 
 		li {
 			&:first-child {
 				svg {
-					width: 82px;
+					@include adaptive-value-desktop("width", 82, 61, 1);
+
+					@media (max-width: em(1024)) {
+						@include adaptive-value-tablet("width", 61, 40, 0);
+					}
+
+					@media (max-width: em(768)) {
+						@include adaptive-value-mobile("width", 40, 30, 0);
+					}
+
+					@media (max-width: em(320)) {
+						width: 30px;
+					}
 				}
 			}
 		}
 	}
 
 	&__item {
-		width: 220px;
-		padding-top: 20px;
-		padding-bottom: 30px;
-		font-weight: 700;
-		font-size: 18px;
-		line-height: 22px;
-		text-align: center;
-		color: $colorLightDark;
+		@include adaptive-value-desktop("width", 220, 180, 1);
+		padding: 20px 5px 30px;
 		background-color: $colorWhite;
-		border-radius: 20px;
+		@include adaptive-value-desktop("border-radius", 20, 18, 1);
 		box-shadow: 5px 10px 20px 5px rgb(0 0 0 / 20%);
 		cursor: pointer;
 		transition: all 0.5s ease;
 
-		&:hover {
-			transform: scale(0.95);
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("width", 180, 150, 0);
+			@include adaptive-value-tablet("padding-top", 20, 30, 0);
+			@include adaptive-value-tablet("padding-bottom", 30, 40, 0);
+		}
 
-			svg {
-				fill: $colorDarkBlue;
+		@media (min-width: em(769)) {
+			&:hover {
+				transform: scale(0.99);
+
+				svg {
+					fill: $colorDarkBlue;
+				}
 			}
 		}
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("width", 150, 140, 0);
+			@include adaptive-value-mobile("padding-top", 30, 17, 0);
+			@include adaptive-value-mobile("padding-right", 5, 4, 0);
+			@include adaptive-value-mobile("padding-bottom", 40, 17, 0);
+			@include adaptive-value-mobile("padding-left", 5, 4, 0);
+		}
+
+		@media (max-width: em(706)) {
+			width: 80%;
+		}
+
+		@media (max-width: em(520)) {
+			width: 100%;
+		}
+
+		@media (max-width: em(320)) {
+			padding: 17px 4px;
+		}
+
 		&:active {
-			transform: scale(0.9);
+			transform: scale(0.95);
 		}
 	}
 
@@ -60,11 +127,53 @@
 		align-items: center;
 		row-gap: 18px;
 
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("row-gap", 18, 13, 1);
+		}
+
 		svg {
-			width: 110px;
-			height: 110px;
+			@include adaptive-value-desktop("width", 110, 82, 1);
+			@include adaptive-value-desktop("height", 110, 82, 1);
 			fill: $colorLightDark;
 			transition: all 0.5s ease;
+
+			@media (max-width: em(1024)) {
+				@include adaptive-value-tablet("width", 82, 50, 0);
+				@include adaptive-value-tablet("height", 82, 50, 0);
+			}
+
+			@media (max-width: em(768)) {
+				@include adaptive-value-mobile("width", 50, 40, 0);
+				@include adaptive-value-mobile("height", 50, 40, 0);
+			}
+
+			@media (max-width: em(320)) {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		h3 {
+			font-weight: 900;
+			@include adaptive-value-desktop("font-size", 18, 17, 1);
+			@include adaptive-value-desktop("line-height", 22, 20, 1);
+			text-align: center;
+			color: $colorLightDark;
+
+			@media (max-width: em(1024)) {
+				@include adaptive-value-tablet("font-size", 17, 14, 0);
+				@include adaptive-value-tablet("line-height", 20, 17, 0);
+			}
+
+			@media (max-width: em(768)) {
+				@include adaptive-value-mobile("font-size", 14, 13, 0);
+				@include adaptive-value-mobile("line-height", 17, 16, 0);
+			}
+
+			@media (max-width: em(320)) {
+				font-size: 13px;
+				line-height: 16px;
+			}
 		}
 	}
 }
