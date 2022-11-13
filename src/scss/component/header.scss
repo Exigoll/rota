@@ -38,7 +38,7 @@
 	display: flex;
 	align-items: center;
 	column-gap: 10px;
-	transition: all 0.1s ease;
+	transition: all 0.5s ease;
 
 	&__img {
 		@include adaptive-value-desktop("width", 74, 64, 1);
@@ -66,7 +66,6 @@
 		@include adaptive-value-desktop("font-size", 28, 24, 1);
 		@include adaptive-value-desktop("line-height", 34, 28, 1);
 		font-weight: 700;
-		transition: all 0.5s ease;
 
 		@media (max-width: em(1024)) {
 			@include adaptive-value-tablet("font-size", 24, 20, 0);
@@ -84,12 +83,18 @@
 		}
 	}
 
-	&:hover {
-		color: $colorPeach;
+	@media (min-width: em(769)) {
+		&:hover {
+			color: $colorPeach;
 
-		svg {
-			fill: $colorPeach;
+			svg {
+				fill: $colorPeach;
+			}
 		}
+	}
+
+	&:active {
+		transform: scale(0.95);
 	}
 }
 
@@ -113,7 +118,7 @@
 				width: 100%;
 				height: 4px;
 				transition: all 0.3s ease 0s;
-				background-color: #fff;
+				background-color: $colorWhite;
 				border-radius: 50px;
 			}
 
@@ -167,19 +172,17 @@
 			position: fixed;
 			top: 0;
 			right: -100%;
-			width: 55%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.9);
-			transition: right 0.5s ease 0s;
-			overflow: auto;
-			column-gap: 0;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+			column-gap: 0;
 			row-gap: 10px;
-			padding-top: 100px;
-			padding-left: 30px;
-			padding-right: 30px;
+			width: 55%;
+			height: 100%;
+			padding: 100px 30px 0;
+			background-color: rgba(0, 0, 0, 0.9);
+			overflow: auto;
+			transition: right 0.5s ease 0s;
 			z-index: 1;
 
 			&._active {
@@ -206,20 +209,21 @@
 			line-height: 20px;
 		}
 
-		&:hover {
-			color: $colorPeach;
-			border-bottom: 3px solid $colorPeach;
-			transform: scale(0.95);
+		@media (min-width: em(769)) {
+			&:hover {
+				color: $colorPeach;
+				border-bottom: 3px solid $colorPeach;
+				transform: scale(0.99);
+			}
 		}
 
 		&:active {
-			transform: scale(0.9);
+			transform: scale(0.95);
 		}
 
 		&--active {
 			border-bottom: 3px solid $colorPeach;
 			color: $colorPeach;
-
 			display: block;
 			@include adaptive-value-desktop("font-size", 20, 18, 1);
 			@include adaptive-value-desktop("line-height", 24, 22, 1);
@@ -234,10 +238,6 @@
 			@media (max-width: em(768)) {
 				font-size: 16px;
 				line-height: 20px;
-			}
-
-			&:active {
-				transform: scale(0.9);
 			}
 		}
 	}
@@ -295,7 +295,7 @@
 		max-width: 45%;
 	}
 
-	@media (max-width: em(360)) {
+	@media (max-width: em(375)) {
 		flex-direction: row;
 		max-width: 23%;
 		justify-content: space-between;
@@ -323,7 +323,7 @@
 				@include adaptive-value-mobile("height", 26, 16, 0);
 			}
 
-			@media (max-width: em(360)) {
+			@media (max-width: em(375)) {
 				width: 30px;
 				height: 30px;
 			}
@@ -347,32 +347,34 @@
 				@include adaptive-value-mobile("line-height", 17, 15, 1);
 			}
 
-			@media (max-width: em(360)) {
+			@media (max-width: em(375)) {
 				display: none;
 			}
 		}
 
-		&:hover {
-			svg {
-				fill: $colorPeach;
-				transform: scale(1.5);
-
-				@media (max-width: em(768)) {
-					fill: $colorLightDark;
-					transform: none;
+		@media (min-width: em(769)) {
+			&:hover {
+				svg {
+					fill: $colorPeach;
+					transform: scale(1.2);
+					/*
+									@media (max-width: em(768)) {
+										fill: $colorLightDark;
+										transform: none;
+									}*/
 				}
-			}
 
-			span {
-				color: $colorPeach;
+				span {
+					color: $colorPeach;
+				}
 			}
 		}
 
 		&:active {
-			transform: scale(0.9);
+			transform: scale(0.95);
 
 			svg {
-				transform: scale(0.9);
+				transform: scale(0.95);
 			}
 		}
 	}
@@ -437,8 +439,7 @@
 			line-height: 15px;
 		}
 
-		&:focus,
-		&:hover {
+		&:focus {
 			border: 3px solid $colorPeach;
 			box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 		}
@@ -462,6 +463,13 @@
 			@media (max-width: em(320)) {
 				font-size: 12px;
 				line-height: 15px;
+			}
+		}
+
+		@media (min-width: em(769)) {
+			&:hover {
+				border: 3px solid $colorPeach;
+				box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 			}
 		}
 	}
@@ -495,6 +503,13 @@
 			@include adaptive-value-tablet("line-height", 20, 18, 0);
 		}
 
+		@media (min-width: em(769)) {
+			&:hover {
+				background-color: $colorPeachActive;
+				transform: scale(0.99);
+			}
+		}
+
 		@media (max-width: em(768)) {
 			@include adaptive-value-mobile("max-width", 80, 70, 0);
 			@include adaptive-value-mobile("padding-top", 14, 10.5, 0);
@@ -514,13 +529,8 @@
 			line-height: 15px;
 		}
 
-		&:hover {
-			background-color: $colorPeachActive;
-			transform: scale(0.99);
-		}
-
 		&:active {
-			transform: scale(0.9);
+			transform: scale(0.95);
 		}
 	}
 }
@@ -544,16 +554,16 @@
 	&:after {
 		content: "";
 		position: absolute;
-		@include adaptive-value-desktop("top", 36, 28, 1);
-		@include adaptive-value-desktop("left", 90, 85, 1);
+		@include adaptive-value-desktop("top", 36, 34, 1);
+		@include adaptive-value-desktop("left", 90, 76, 1);
 		@include adaptive-value-desktop("width", 40, 30, 1);
 		height: 1px;
 		background-color: rgba(255, 255, 255, 0.3);
 		transform: rotate(90deg);
 
 		@media (max-width: em(1024)) {
-			@include adaptive-value-tablet("top", 28, 22, 1);
-			@include adaptive-value-tablet("left", 85, 78, 1);
+			@include adaptive-value-tablet("top", 34, 22, 1);
+			@include adaptive-value-tablet("left", 76, 78, 1);
 			@include adaptive-value-tablet("width", 30, 24, 1);
 		}
 
@@ -586,6 +596,13 @@
 		@include adaptive-value-tablet("padding-right", 8.5, 8.5, 0);
 		@include adaptive-value-tablet("padding-bottom", 8.75, 5, 0);
 		@include adaptive-value-tablet("padding-left", 8.5, 8.5, 0);
+	}
+
+	@media (min-width: em(769)) {
+		&:hover {
+			background-color: #1b1f20;
+			transform: scale(0.99);
+		}
 	}
 
 	@media (max-width: em(768)) {
@@ -625,13 +642,8 @@
 		}
 	}
 
-	&:hover {
-		background-color: #1b1f20;
-		transform: scale(0.99);
-	}
-
 	&:active {
-		transform: scale(0.9);
+		transform: scale(0.95);
 	}
 
 	&--right {
