@@ -3168,6 +3168,28 @@ main {
 		);
   }
 }
+@media (max-width: 48em) {
+  .slider-info__slide p {
+    max-width: 60%;
+    font-size: calc(
+			12px +
+				12 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			14px +
+				15 *
+				((100vw - 320px) / 448)
+		);
+  }
+}
+@media (max-width: 20em) {
+  .slider-info__slide p {
+    max-width: 70%;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .slider-info__slide:after {
   content: "";
   position: absolute;
