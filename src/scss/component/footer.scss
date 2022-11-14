@@ -1,73 +1,173 @@
-@import "../variables";
+@import "../supports";
 
 .footer {
 	position: relative;
-	height: 255px;
+	@include adaptive-value-desktop("height", 250, 194, 1);
 	background-color: $colorDarkBlue;
-	color: #fff;
+	color: $colorWhite;
+
+	@media (max-width: em(1024)) {
+		@include adaptive-value-tablet("height", 194, 211, 0);
+	}
+
+	@media (max-width: em(768)) {
+		height: 211px;
+	}
+
+	@media (max-width: em(767)) {
+		height: 345px;
+	}
+
+	@media (max-width: em(552)) {
+		@include adaptive-value-mobile("height", 496, 531, 1);
+	}
+
+	@media (max-width: em(320)) {
+		height: 531px;
+	}
 
 	&:after {
 		content: "";
 		position: absolute;
-		top: 209px;
+		@include adaptive-value-desktop("top", 203, 156, 1);
 		left: 0;
 		width: 100%;
 		height: 1px;
 		background-color: $colorWhite;
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("top", 156, 172, 0);
+		}
+
+		@media (max-width: em(768)) {
+		}
+
+		@media (max-width: em(767)) {
+			top: 306px;
+		}
+
+		@media (max-width: em(552)) {
+			top: 474px;
+		}
 	}
 }
 
 .navigation-footer {
 	color: inherit;
-	padding-top: 30px;
-	padding-bottom: 20px;
+	@include adaptive-value-desktop("padding-top", 30, 20, 1);
+	@include adaptive-value-desktop("padding-bottom", 20, 15, 1);
+
+	@media (max-width: em(1024)) {
+		padding-top: 20px;
+		padding-bottom: 15px;
+	}
 }
 
 .list-footer {
 	display: flex;
 	justify-content: space-between;
 
+	@media (max-width: em(1024)) {
+	}
+
+	@media (max-width: em(767)) {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		@include adaptive-value-mobile("column-gap", 178, 0, 1);
+		row-gap: 30px;
+
+		li:nth-child(3) {
+			width: 100%;
+
+			@media (max-width: em(552)) {
+				//top: 558px;
+			}
+		}
+	}
+
+	@media (max-width: em(552)) {
+		flex-wrap: nowrap;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	&__title {
-		margin-bottom: 30px;
+		@include adaptive-value-desktop("margin-bottom", 30, 20, 1);
 		font-weight: 700;
-		font-size: 24px;
-		line-height: 29px;
+		@include adaptive-value-desktop("font-size", 20, 18, 1);
+		@include adaptive-value-desktop("line-height", 24, 22, 1);
+
+		@media (max-width: em(1024)) {
+			margin-bottom: 18px;
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
 
 	&__item {
 		display: flex;
 		flex-direction: column;
-		max-width: 400px;
+		@include adaptive-value-desktop("width", 400, 320, 1);
+
+		@media (max-width: em(552)) {
+			max-width: 520px;
+			width: 100%;
+			align-items: center;
+		}
 	}
 }
 
 .sublist-footer {
 	display: flex;
 	flex-direction: column;
-	row-gap: 20px;
+	@include adaptive-value-desktop("row-gap", 20, 15, 1);
+
+	@media (max-width: em(1024)) {
+		row-gap: 15px;
+	}
+
+	@media (max-width: em(552)) {
+		@include adaptive-value-mobile("width", 320, 300, 1);
+	}
+
+	@media (max-width: em(320)) {
+		width: 300px;
+	}
 
 	&__link {
 		display: flex;
 		align-items: center;
-		font-size: 16px;
-		line-height: 20px;
+		@include adaptive-value-desktop("font-size", 16, 14, 1);
+		@include adaptive-value-desktop("line-height", 20, 17, 1);
 		transition: all 0.5s ease;
 
+		@media (max-width: em(1024)) {
+			font-size: 14px;
+			line-height: 17px;
+		}
+
 		svg {
-			width: 20px;
-			height: 20px;
+			@include adaptive-value-desktop("width", 20, 16, 1);
+			@include adaptive-value-desktop("height", 20, 16, 1);
 			margin-right: 10px;
 			fill: $colorWhite;
 			transition: all 0.5s ease;
+
+			@media (max-width: em(1024)) {
+				width: 16px;
+				height: 16px;
+			}
 		}
 
-		&:hover {
-			color: #e77c58;
-			transform: scaleX(0.99);
+		@media (min-width: em(769)) {
+			&:hover {
+				color: $colorPeach;
+				transform: scaleX(0.99);
 
-			svg {
-				fill: #e77c58;
-				transform: scale(1.5);
+				svg {
+					fill: $colorPeach;
+					transform: scale(1.5);
+				}
 			}
 		}
 
@@ -81,7 +181,16 @@
 	display: flex;
 	align-content: center;
 	justify-content: center;
-	padding: 13px 0;
-	font-size: 14px;
-	line-height: 20px;
+	@include adaptive-value-desktop("padding-top", 13, 10, 1);
+	@include adaptive-value-desktop("padding-bottom", 13, 10, 1);
+	@include adaptive-value-desktop("font-size", 14, 12, 1);
+	@include adaptive-value-desktop("line-height", 20, 18, 1);
+	text-align: center;
+
+	@media (max-width: em(1024)) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 12px;
+		line-height: 18px;
+	}
 }
