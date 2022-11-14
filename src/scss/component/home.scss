@@ -178,15 +178,7 @@
 	}
 }
 
-.info {
-	padding-bottom: 50px;
-}
-
 .slider-info {
-	//width: 100%;
-	//max-height: 400px;
-	//min-height: 180px;
-	//height: 100%;
 	@include adaptive-value("border-radius", 20, 10, 1);
 	cursor: pointer;
 }
@@ -286,38 +278,108 @@
 .news {
 	padding: 50px 0;
 
+	@media (max-width: em(768)) {
+		@include adaptive-value-mobile("padding-top", 50, 30, 1);
+		@include adaptive-value-mobile("padding-bottom", 50, 30, 1);
+	}
+
+	@media (max-width: em(320)) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
 	&__list {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 40px;
+		grid-row-gap: 40px;
+
+		@media (max-width: em(1280)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: em(768)) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-column-gap: 0;
+		}
 	}
 }
 
 .title-news {
-	font-weight: 700; // 900?
-	font-size: 40px;
-	line-height: 48px;
+	@include adaptive-value("padding-bottom", 30, 20, 1);
+	font-weight: 900;
+	@include adaptive-value-desktop("font-size", 36, 30, 1);
+	@include adaptive-value-desktop("line-height", 44, 37, 1);
 	color: $colorLightDark;
+
+	@media (max-width: em(1024)) {
+		@include adaptive-value-tablet("font-size", 30, 28, 0);
+		@include adaptive-value-tablet("line-height", 37, 34, 0);
+	}
+
+	@media (max-width: em(768)) {
+		@include adaptive-value-mobile("font-size", 28, 18, 0);
+		@include adaptive-value-mobile("line-height", 34, 22, 0);
+	}
+
+	@media (max-width: em(320)) {
+		padding-bottom: 20px;
+		font-size: 18px;
+		line-height: 22px;
+	}
 }
 
 .item-news {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 400px;
+	max-width: 520px;
 	width: 100%;
 	background-color: $colorWhite;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 20px;
+	@include adaptive-value("border-radius", 20, 10, 1);
+	transition: all 0.5s ease;
+
+	@media (max-width: em(1024)) {
+		@include adaptive-value-tablet("max-width", 472, 344, 0);
+	}
+
+	@media (min-width: em(769)) {
+		&:hover {
+			transform: scale(0.99);
+		}
+	}
+
+	@media (max-width: em(768)) {
+		max-width: 60%;
+	}
+
+	@media (max-width: em(580)) {
+		max-width: 80%;
+	}
+
+	@media (max-width: em(320)) {
+		border-radius: 10px;
+	}
 
 	&__img {
-		min-height: 260px;
+		@include adaptive-value("min-height", 260, 140, 1);
 		height: 100%;
+
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center;
-			border-radius: 20px 20px 0 0;
+			@include adaptive-value("border-top-left-radius", 20, 10, 1);
+			@include adaptive-value("border-top-right-radius", 20, 10, 1);
+
+			@media (max-width: em(320)) {
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+			}
 		}
 	}
 }
@@ -325,43 +387,117 @@
 .content-news {
 	display: flex;
 	flex-direction: column;
-	row-gap: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
+	@include adaptive-value("row-gap", 20, 10, 1);
+	@include adaptive-value("padding-right", 20, 10, 1);
+	@include adaptive-value("padding-left", 20, 10, 1);
+
+	@media (max-width: em(320)) {
+		row-gap: 10px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
 
 	&__title {
-		padding-top: 30px;
+		@include adaptive-value("padding-top", 30, 20, 1);
 		font-weight: 700;
-		font-size: 18px;
-		line-height: 22px;
+		@include adaptive-value-desktop("font-size", 22, 20, 1);
+		@include adaptive-value-desktop("line-height", 26, 24, 1);
 		text-align: center;
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("font-size", 20, 18, 0);
+			@include adaptive-value-tablet("line-height", 24, 22, 0);
+		}
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("font-size", 18, 14, 0);
+			@include adaptive-value-mobile("line-height", 22, 18, 0);
+		}
+
+		@media (max-width: em(320)) {
+			padding-top: 20px;
+			font-size: 14px;
+			line-height: 18px;
+		}
 	}
+
 	&__text {
-		min-height: 118px;
-		height: 100%;
+		padding: 0 20px;
+		height: 112px;
 		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
+		font-size: 16px;
+		line-height: 19px;
+		@include adaptive-value("text-indent", 25, 20, 1);
+		text-align: justify;
+		text-overflow: clip;
+		overflow: hidden;
+		-webkit-line-clamp: 6;
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("height", 114, 104, 1);
+			@include adaptive-value-tablet("padding-right", 20, 15, 1);
+			@include adaptive-value-tablet("padding-left", 20, 15, 1);
+			@include adaptive-value-tablet("font-size", 16, 14, 1);
+			@include adaptive-value-tablet("line-height", 19, 17, 1);
+		}
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("height", 104, 86, 0);
+			@include adaptive-value-mobile("font-size", 14, 12, 0);
+			@include adaptive-value-mobile("line-height", 17, 14, 0);
+		}
+
+		@media (max-width: em(320)) {
+			height: 86px;
+			font-size: 12px;
+			line-height: 14px;
+			text-indent: 20px;
+		}
 	}
 }
 
 .extra-news {
 	display: flex;
-	justify-content: space-between;
-	padding-bottom: 30px;
+	justify-content: space-around;
+	@include adaptive-value("padding-bottom", 30, 20, 1);
+	@include adaptive-value("padding-top", 20, 10, 1);
+
+	@media (max-width: em(768)) {
+		justify-content: space-between;
+	}
 
 	&__date,
 	&__link {
-		padding-top: 12px;
-		padding-left: 44px;
-		padding-bottom: 12px;
-		padding-right: 44px;
-		border-radius: 20px;
+		padding: 12px 44px;
+		@include adaptive-value("border-radius", 20, 10, 1);
 		color: $colorBlack;
-	}
 
-	&__date {
-		border: 1px solid black;
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("padding-top", 12, 8, 1);
+			@include adaptive-value-tablet("padding-right", 44, 34, 1);
+			@include adaptive-value-tablet("padding-bottom", 12, 8, 1);
+			@include adaptive-value-tablet("padding-left", 44, 34, 1);
+			@include adaptive-value-tablet("font-size", 16, 14, 1);
+			@include adaptive-value-tablet("line-height", 19, 17, 1);
+		}
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("padding-top", 8, 5, 0);
+			@include adaptive-value-mobile("padding-right", 34, 20, 0);
+			@include adaptive-value-mobile("padding-bottom", 8, 5, 0);
+			@include adaptive-value-mobile("padding-left", 34, 20, 0);
+			@include adaptive-value-mobile("font-size", 14, 12, 0);
+			@include adaptive-value-mobile("line-height", 17, 14, 0);
+		}
+
+		@media (max-width: em(320)) {
+			padding: 5px 20px;
+			border-radius: 10px;
+			font-size: 12px;
+			line-height: 14px;
+		}
 	}
 
 	&__link {
@@ -370,14 +506,17 @@
 		color: $colorWhite;
 		transition: all 0.5s ease;
 
-		&:hover {
-			border: 1px solid $colorDarkBlue;
-			background-color: $colorWhite;
-			color: $colorDarkBlue;
-			transform: scale(0.95);
+		@media (min-width: em(769)) {
+			&:hover {
+				border: 1px solid $colorDarkBlue;
+				background-color: $colorWhite;
+				color: $colorDarkBlue;
+				transform: scale(0.99);
+			}
 		}
+
 		&:active {
-			transform: scale(0.9);
+			transform: scale(0.95);
 		}
 	}
 }
