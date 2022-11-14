@@ -3948,8 +3948,8 @@ main {
 @media (max-width: 48em) {
   .content-news__text {
     height: calc(
-			84px +
-				20 *
+			88px +
+				16 *
 				((100vw - 320px) / 448)
 		);
     font-size: calc(
@@ -3966,7 +3966,7 @@ main {
 }
 @media (max-width: 20em) {
   .content-news__text {
-    height: 84px;
+    height: 88px;
     font-size: 12px;
     line-height: 14px;
     text-indent: 20px;
