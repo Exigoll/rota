@@ -524,29 +524,52 @@
 .link-news {
 	display: flex;
 	align-items: center;
-	@include adaptive-value("column-gap", 10, 5, 1);
-	width: 123px;
+	column-gap: 10px;
+	@include adaptive-value("width", 140, 101, 1);
 	margin-top: 20px;
 	margin-left: auto;
+	transition: all 0.5s ease;
+
+	@media (min-width: em(769)) {
+		&:hover {
+			p {
+				color: $colorPeach;
+			}
+
+			svg {
+				transform: scale(1.2);
+				fill: $colorPeach;
+			}
+		}
+	}
 
 	@media (max-width: em(320)) {
-		column-gap: 5px;
 		width: 101px;
+	}
+
+	&:active {
+		transform: scale(0.95);
 	}
 
 	p {
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 19px;
+		transition: all 0.5s ease;
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("font-size", 16, 14, 1);
+			@include adaptive-value-tablet("line-height", 19, 17, 1);
+		}
 
 		@media (max-width: em(768)) {
-			@include adaptive-value-mobile("font-size", 16, 14, 1);
-			@include adaptive-value-mobile("font-size", 19, 17, 1);
+			@include adaptive-value-mobile("font-size", 14, 12, 0);
+			@include adaptive-value-mobile("line-height", 17, 14, 0);
 		}
 
 		@media (max-width: em(320)) {
-			font-size: 14px;
-			line-height: 17px;
+			font-size: 12px;
+			line-height: 14px;
 		}
 	}
 
@@ -554,6 +577,7 @@
 		width: 20px;
 		height: 20px;
 		fill: $colorLightDark;
+		transition: all 0.5s ease;
 
 		@media (max-width: em(768)) {
 			@include adaptive-value-mobile("width", 20, 14, 1);
