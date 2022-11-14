@@ -29,7 +29,7 @@ if (iconMenu) {
 
 /*Toggle active link for header-navigation*/
 const currentLocation = location.href;
-const menuItem = document.querySelectorAll("nav ul li a");
+const menuItem = document.querySelectorAll(".menu-header__link");
 const menuLength = menuItem.length;
 for (let i = 0; i < menuLength; i++) {
 	if (menuItem[i].href === currentLocation) {
