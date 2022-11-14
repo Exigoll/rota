@@ -3964,11 +3964,6 @@ main {
 		);
   }
 }
-@media (max-width: 23.4375em) {
-  .content-news__text {
-    height: 80px;
-  }
-}
 @media (max-width: 20em) {
   .content-news__text {
     height: 84px;
