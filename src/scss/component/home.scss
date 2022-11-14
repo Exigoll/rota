@@ -449,6 +449,10 @@
 			@include adaptive-value-mobile("line-height", 17, 14, 0);
 		}
 
+		@media (max-width: em(375)) {
+			height: 80px;
+		}
+
 		@media (max-width: em(320)) {
 			height: 84px;
 			font-size: 12px;
