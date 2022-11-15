@@ -94,3 +94,9 @@ main {
 		@include adaptive-value-mobile("padding-left", 20, 10, 0);
 	}
 }
+
+.test {
+	background: url(@img/slider-1.jpg) 0 0 no-repeat;
+	position: absolute;
+	top: 400px;
+}

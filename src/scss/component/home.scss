@@ -1,7 +1,7 @@
 @import "../supports";
 
 .home {
-	background: url(../assets/img/svg/home-bg-1.svg) no-repeat 112% 2%/25%,
+	background: url(@img/svg/home-bg-1.svg) no-repeat 112% 2%/25%,
 		url(../assets/img/svg/home-bg-2.svg) no-repeat -3% 55%/25%,
 		url(../assets/img/svg/home-bg-3.svg) no-repeat 102% 147%/45%;
 }
@@ -193,16 +193,20 @@
 	align-items: center;
 	@include adaptive-value("border-radius", 20, 10, 1);
 
-	img {
-		display: block;
+	picture {
 		width: 100%;
-		@include adaptive-value-desktop("height", 600, 400, 1);
-		object-fit: cover;
-		object-position: bottom;
-		@include adaptive-value("border-radius", 20, 10, 1);
 
-		@media (max-width: em(1024)) {
-			@include adaptive-value-tablet("height", 400, 300, 0);
+		img {
+			display: block;
+			width: 100%;
+			@include adaptive-value-desktop("height", 600, 400, 1);
+			object-fit: cover;
+			object-position: bottom;
+			@include adaptive-value("border-radius", 20, 10, 1);
+
+			@media (max-width: em(1024)) {
+				@include adaptive-value-tablet("height", 400, 300, 0);
+			}
 		}
 	}
 
