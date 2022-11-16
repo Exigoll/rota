@@ -2659,14 +2659,14 @@ main {
 @media (max-width: 34.5em) and (max-width: 1475px) {
   .footer {
     height: calc(
-				531px + -35 *
+				533px + -37 *
 					((100vw - 320px) / 1155)
 			);
   }
 }
 @media (max-width: 20em) {
   .footer {
-    height: 531px;
+    height: 533px;
   }
 }
 .footer:after {
@@ -3127,6 +3127,7 @@ main {
   box-shadow: 5px 10px 20px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.5s ease;
+  will-change: transform;
 }
 @media (max-width: 1475px) {
   .category__item {
@@ -3165,7 +3166,7 @@ main {
 }
 @media (min-width: 48.0625em) {
   .category__item:hover {
-    transform: scale(0.99);
+    transform: scale(0.98);
   }
   .category__item:hover svg {
     fill: #1b2f52;
@@ -3216,7 +3217,7 @@ main {
   }
 }
 .category__item:active {
-  transform: scale(0.95);
+  transform: scale(0.96);
 }
 .category__link {
   display: flex;
@@ -3388,15 +3389,15 @@ main {
 .slider-info__slide picture img {
   display: block;
   width: 100%;
-  height: 600px;
+  height: 440px;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
   border-radius: 20px;
 }
 @media (max-width: 1475px) {
   .slider-info__slide picture img {
     height: calc(
-				400px + 200 *
+				380px + 60 *
 					((100vw - 1024px) / 451)
 			);
   }
@@ -3412,10 +3413,24 @@ main {
 @media (max-width: 64em) {
   .slider-info__slide picture img {
     height: calc(
-			300px +
-				100 *
+			320px +
+				60 *
 				((100vw - 768px) / 256)
 		);
+  }
+}
+@media (max-width: 48em) {
+  .slider-info__slide picture img {
+    height: calc(
+			300px +
+				20 *
+				((100vw - 320px) / 448)
+		);
+  }
+}
+@media (max-width: 20em) {
+  .slider-info__slide picture img {
+    height: 140px;
   }
 }
 .slider-info__slide p {
@@ -3957,8 +3972,8 @@ main {
 @media (max-width: 48em) {
   .content-news__text {
     height: calc(
-			88px +
-				16 *
+			82px +
+				22 *
 				((100vw - 320px) / 448)
 		);
     font-size: calc(
@@ -3975,7 +3990,7 @@ main {
 }
 @media (max-width: 20em) {
   .content-news__text {
-    height: 88px;
+    height: 82px;
     font-size: 12px;
     line-height: 14px;
     text-indent: 20px;
