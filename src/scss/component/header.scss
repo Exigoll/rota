@@ -282,11 +282,11 @@
 	flex-direction: column;
 	align-items: flex-start;
 	row-gap: 10px;
-	max-width: 170px;
+	max-width: 180px;
 	width: 100%;
 
 	@media (max-width: em(1024)) {
-		@include adaptive-value-tablet("max-width", 170, 148, 1);
+		@include adaptive-value-tablet("max-width", 180, 158, 1);
 	}
 
 	@media (max-width: em(768)) {

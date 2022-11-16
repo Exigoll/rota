@@ -16,7 +16,7 @@ body {
 
 body {
 	position: relative;
-	font-family: "Proxima Nova", sans-serif;
+	font-family: $fontRoboto;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 14px;
@@ -93,10 +93,4 @@ main {
 		@include adaptive-value-mobile("padding-right", 20, 10, 0);
 		@include adaptive-value-mobile("padding-left", 20, 10, 0);
 	}
-}
-
-.test {
-	background: url(@img/slider-1.jpg) 0 0 no-repeat;
-	position: absolute;
-	top: 400px;
 }
