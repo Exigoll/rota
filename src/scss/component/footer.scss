@@ -19,11 +19,11 @@
 	}
 
 	@media (max-width: em(552)) {
-		@include adaptive-value-mobile("height", 496, 531, 1);
+		@include adaptive-value-mobile("height", 496, 533, 1);
 	}
 
 	@media (max-width: em(320)) {
-		height: 531px;
+		height: 533px;
 	}
 
 	&:after {

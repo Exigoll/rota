@@ -79,6 +79,7 @@
 		box-shadow: 5px 10px 20px 5px rgb(0 0 0 / 20%);
 		cursor: pointer;
 		transition: all 0.5s ease;
+		will-change: transform;
 
 		@media (max-width: em(1024)) {
 			@include adaptive-value-tablet("width", 180, 150, 0);
@@ -88,7 +89,7 @@
 
 		@media (min-width: em(769)) {
 			&:hover {
-				transform: scale(0.99);
+				transform: scale(0.98);
 
 				svg {
 					fill: $colorDarkBlue;
@@ -117,7 +118,7 @@
 		}
 
 		&:active {
-			transform: scale(0.95);
+			transform: scale(0.96);
 		}
 	}
 
@@ -199,13 +200,21 @@
 		img {
 			display: block;
 			width: 100%;
-			@include adaptive-value-desktop("height", 600, 400, 1);
+			@include adaptive-value-desktop("height", 440, 380, 1);
 			object-fit: cover;
-			object-position: bottom;
+			object-position: center;
 			@include adaptive-value("border-radius", 20, 10, 1);
 
 			@media (max-width: em(1024)) {
-				@include adaptive-value-tablet("height", 400, 300, 0);
+				@include adaptive-value-tablet("height", 380, 320, 0);
+			}
+
+			@media (max-width: em(768)) {
+				@include adaptive-value-mobile("height", 320, 300, 0);
+			}
+
+			@media (max-width: em(320)) {
+				height: 140px;
 			}
 		}
 	}
@@ -448,13 +457,13 @@
 		}
 
 		@media (max-width: em(768)) {
-			@include adaptive-value-mobile("height", 104, 88, 0);
+			@include adaptive-value-mobile("height", 104, 82, 0);
 			@include adaptive-value-mobile("font-size", 14, 12, 0);
 			@include adaptive-value-mobile("line-height", 17, 14, 0);
 		}
 
 		@media (max-width: em(320)) {
-			height: 88px;
+			height: 82px;
 			font-size: 12px;
 			line-height: 14px;
 			text-indent: 20px;
