@@ -14,8 +14,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Roboto:wght@300;400&display=swap&_v=20221123152641" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20221123152641">
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Roboto:wght@300;400&display=swap&_v=20221123195629" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221123195629">
 	<title>Rota: интернет-магазин автозапчастей</title>
 </head>
 
@@ -64,21 +64,33 @@
 					<svg><use xlink:href="./assets/img/icons/icons.svg#phone"></use></svg>
 					<span>+7-902-99-99-999</span>
 				</a>
-				<a class="contacts-header__link" href="mailto:pirates@mail.ru">
+				<a class="contacts-header__link" href="mailto:info@rotazap.ru">
 					<svg><use xlink:href="./assets/img/icons/icons.svg#mail"></use></svg>
-					<span>pirates@mail.ru</span>
+					<span>info@rotazap.ru</span>
 				</a>
 			</div>
 			<div class="bottom-header__search search-header">
 				<input type="text" placeholder="Введите VIN номер детали">
 				<button type="submit">Найти</button>
 			</div>
-			<div class="bottom-header__office office-header">
-				<a class="office-btn office-btn--right" href="./login.html">
+			<!--Офис не авторизированного пользователя-->
+			<!--<div class="bottom-header__office office-header">
+				<a class="office-btn&#45;&#45;right" href="./login.html">
 					<svg><use xlink:href="./assets/img/icons/icons.svg#login"></use></svg>
 					<span>Вход</span>
 				</a>
-				<a class="office-btn office-btn--left" href="./registration.html">
+				<a class="office-btn&#45;&#45;left" href="./registration.html">
+					<svg><use xlink:href="./assets/img/icons/icons.svg#registration"></use></svg>
+					<span>Регистрация</span>
+				</a>
+			</div>-->
+			<!--Офис авторизированного пользователя-->
+			<div class="bottom-header__office office-header">
+				<a class="office-btn--right" href="./login.html">
+					<svg><use xlink:href="./assets/img/icons/icons.svg#login"></use></svg>
+					<span>Вход</span>
+				</a>
+				<a class="office-btn--left" href="./registration.html">
 					<svg><use xlink:href="./assets/img/icons/icons.svg#registration"></use></svg>
 					<span>Регистрация</span>
 				</a>
@@ -308,9 +320,9 @@
 							</a>
 						</li>
 						<li class="sublist-footer__item">
-							<a class="sublist-footer__link" href="/">
+							<a class="sublist-footer__link" href="mailto:info@rotazap.ru">
 								<svg><use xlink:href="./assets/img/icons/icons.svg#mail"></use></svg>
-								pirates@mail.ru
+								info@rotazap.ru
 							</a>
 						</li>
 					</ul>
@@ -321,6 +333,6 @@
 	</div>
 </footer>-->
 
-<script src="js/app.min.js?_v=20221123152641"></script>
+<script src="js/app.min.js?_v=20221123195629"></script>
 </body>
 </html>
