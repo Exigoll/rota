@@ -2469,7 +2469,7 @@ main {
 
   .office-header:after {
     left: calc(
-				90px + 4 *
+				89px + 5 *
 					((100vw - 1024px) / 451)
 			);
   }
@@ -3147,7 +3147,7 @@ main {
   .office-header:after {
     left: calc(
 			89px +
-				1 *
+				0 *
 				((100vw - 768px) / 256)
 		);
     width: 30px;
@@ -3780,7 +3780,7 @@ main {
   .office-header:after {
     left: calc(
 			94px +
-				-4 *
+				-5 *
 				((100vw - 320px) / 448)
 		);
     width: calc(
@@ -4589,6 +4589,10 @@ main {
 }
 
 @media (max-width: 27.5em) {
+  .menu-header__list {
+    width: 75%;
+  }
+
   .contacts-header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -4607,6 +4611,17 @@ main {
 
   .contacts-header__link span {
     display: none;
+  }
+}
+
+@media (max-width: 23.4375em) {
+  .contacts-header {
+    width: 65px;
+  }
+
+  .contacts-header__link svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
