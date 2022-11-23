@@ -1678,22 +1678,38 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-column-gap: 0.5px;
+     -moz-column-gap: 0.5px;
+          column-gap: 0.5px;
+  /*&:after {
+  	content: "";
+  	position: absolute;
+  	top: 50%;
+  	@include adaptive-value-desktop("left", 94, 89, 1);
+  	@include adaptive-value-desktop("width", 40, 30, 1);
+  	height: 1px;
+  	background-color: rgba(255, 255, 255, 0.3);
+  	transform: rotate(90deg);
+
+  	@media (max-width: em(1024)) {
+  		@include adaptive-value-tablet("left", 89, 89, 0);
+  		width: 30px;
+  	}
+
+  	@media (max-width: em(768)) {
+  		@include adaptive-value-mobile("left", 89, 94, 0);
+  		@include adaptive-value-mobile("width", 30, 20, 0);
+  	}
+
+  	@media (max-width: em(320)) {
+  		left: 94px;
+  		width: 20px;
+  	}
+  }*/
 }
 
-.office-header:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 94px;
-  width: 40px;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.3);
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.office-btn {
+.office-btn--right,
+.office-btn--left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1722,7 +1738,8 @@ main {
   transition: all 0.5s ease;
 }
 
-.office-btn svg {
+.office-btn--right svg,
+.office-btn--left svg {
   width: 30px;
   height: 30px;
   fill: #fff;
@@ -1731,12 +1748,14 @@ main {
   transition: all 0.5s ease;
 }
 
-.office-btn span {
+.office-btn--right span,
+.office-btn--left span {
   font-size: 12px;
   line-height: 12px;
 }
 
-.office-btn:active {
+.office-btn--right:active,
+.office-btn--left:active {
   -webkit-transform: scale(0.96);
       -ms-transform: scale(0.96);
           transform: scale(0.96);
@@ -2220,7 +2239,8 @@ main {
     background-color: #f76435;
   }
 
-  .office-btn:hover {
+  .office-btn--right:hover,
+  .office-btn--left:hover {
     background-color: #1b1f20;
   }
 
@@ -2467,70 +2487,64 @@ main {
 			);
   }
 
-  .office-header:after {
-    left: calc(
-				89px + 5 *
-					((100vw - 1024px) / 451)
-			);
-  }
-
-  .office-header:after {
-    width: calc(
-				30px + 10 *
-					((100vw - 1024px) / 451)
-			);
-  }
-
-  .office-btn {
+  .office-btn--right,
+  .office-btn--left {
     width: calc(
 				104px + 10 *
 					((100vw - 1024px) / 451)
 			);
   }
 
-  .office-btn {
+  .office-btn--right,
+  .office-btn--left {
     height: calc(
 				40px + 30 *
 					((100vw - 320px) / 1155)
 			);
   }
 
-  .office-btn {
+  .office-btn--right,
+  .office-btn--left {
     padding-top: calc(
 				6px + 4 *
 					((100vw - 320px) / 1155)
 			);
   }
 
-  .office-btn {
+  .office-btn--right,
+  .office-btn--left {
     padding-right: calc(
 				8.5px + 6.5 *
 					((100vw - 320px) / 1155)
 			);
   }
 
-  .office-btn {
+  .office-btn--right,
+  .office-btn--left {
     padding-bottom: calc(
 				6px + 4 *
 					((100vw - 320px) / 1155)
 			);
   }
 
-  .office-btn {
+  .office-btn--right,
+  .office-btn--left {
     padding-left: calc(
 				8.5px + 6.5 *
 					((100vw - 320px) / 1155)
 			);
   }
 
-  .office-btn svg {
+  .office-btn--right svg,
+  .office-btn--left svg {
     width: calc(
 				24px + 6 *
 					((100vw - 1024px) / 451)
 			);
   }
 
-  .office-btn svg {
+  .office-btn--right svg,
+  .office-btn--left svg {
     height: calc(
 				24px + 6 *
 					((100vw - 1024px) / 451)
@@ -3144,20 +3158,13 @@ main {
 		);
   }
 
-  .office-header:after {
-    left: calc(
-			89px +
-				0 *
-				((100vw - 768px) / 256)
-		);
-    width: 30px;
-  }
-
-  .office-btn {
+  .office-btn--right,
+  .office-btn--left {
     width: 104px;
   }
 
-  .office-btn svg {
+  .office-btn--right svg,
+  .office-btn--left svg {
     width: calc(
 			20px +
 				4 *
@@ -3777,19 +3784,6 @@ main {
             order: 2;
   }
 
-  .office-header:after {
-    left: calc(
-			94px +
-				-5 *
-				((100vw - 320px) / 448)
-		);
-    width: calc(
-			20px +
-				10 *
-				((100vw - 320px) / 448)
-		);
-  }
-
   .footer {
     height: 211px;
   }
@@ -4231,11 +4225,6 @@ main {
     line-height: 15px;
   }
 
-  .office-header:after {
-    left: 94px;
-    width: 20px;
-  }
-
   .footer {
     height: 535px;
   }
@@ -4448,7 +4437,8 @@ main {
 }
 
 @media (max-width: 47.9375em) {
-  .office-btn svg {
+  .office-btn--right svg,
+  .office-btn--left svg {
     display: none;
   }
 
