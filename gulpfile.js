@@ -3,8 +3,6 @@ import { path } from "./gulp/config/path.js";
 import { plugins } from "./gulp/config/plugins.js";
 
 global.app = {
-	//isBuild: process.argv.includes("--build"),
-	//isDev: !process.argv.includes("--build"),
 	path: path,
 	gulp: gulp,
 	plugins: plugins
@@ -17,7 +15,7 @@ import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
-import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/font.js";
+/*import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/font.js";*/
 import { sprite } from "./gulp/tasks/sprite.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
@@ -31,10 +29,10 @@ function watcher() {
 	gulp.watch(path.watch.svgicons, sprite);
 }
 
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+/*const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);*/
 
 const mainTasks = gulp.series(
-	fonts,
+	/*fonts*/
 	gulp.parallel(copy, html, scss, js, images, sprite)
 );
 

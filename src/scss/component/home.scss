@@ -360,12 +360,6 @@
 		@include adaptive-value-tablet("max-width", 472, 344, 0);
 	}
 
-	@media (min-width: em(769)) {
-		&:hover {
-			transform: scale(0.99);
-		}
-	}
-
 	@media (max-width: em(768)) {
 		max-width: 60%;
 	}
