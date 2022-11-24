@@ -1594,12 +1594,8 @@ main {
   padding-left: 20px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  -webkit-border-top-left-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
   border: 3px solid transparent;
   background-color: #fff;
   color: #2e3536;
@@ -2439,20 +2435,6 @@ main {
 
   .search-header input {
     border-bottom-left-radius: calc(
-				10px + 10 *
-					((100vw - 320px) / 1155)
-			);
-  }
-
-  .search-header input {
-    -webkit-border-top-left-radius: calc(
-				10px + 10 *
-					((100vw - 320px) / 1155)
-			);
-  }
-
-  .search-header input {
-    -webkit-border-bottom-left-radius: calc(
 				10px + 10 *
 					((100vw - 320px) / 1155)
 			);
