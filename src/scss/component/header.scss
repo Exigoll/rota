@@ -412,10 +412,10 @@
 		padding-right: 10px;
 		@include adaptive-value-desktop("padding-bottom", 22, 15.75, 1);
 		padding-left: 20px;
-		@include adaptive-value("-webkit-border-top-left-radius ", 20, 10, 1);
 		@include adaptive-value("border-top-left-radius", 20, 10, 1);
-		@include adaptive-value("-webkit-border-top-right-radius ", 20, 10, 1);
 		@include adaptive-value("border-bottom-left-radius", 20, 10, 1);
+		@include adaptive-value("-webkit-border-top-left-radius", 20, 10, 1);
+		@include adaptive-value("-webkit-border-top-right-radius", 20, 10, 1);
 		border: 3px solid transparent;
 		background-color: $colorWhite;
 		color: $colorLightDark;
