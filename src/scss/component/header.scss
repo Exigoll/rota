@@ -393,7 +393,7 @@
 	align-items: center;
 	@include adaptive-value-desktop("max-width", 600, 420, 0);
 	width: 100%;
-	@include adaptive-value("border-radius", 20, 10, 1);
+	//@include adaptive-value("border-radius", 20, 10, 1);
 
 	@media (max-width: em(1024)) {
 		@include adaptive-value-tablet("max-width", 420, 320, 0);
@@ -416,6 +416,10 @@
 		@include adaptive-value("border-bottom-left-radius", 20, 10, 1);
 		@include adaptive-value("-webkit-border-top-left-radius", 20, 10, 1);
 		@include adaptive-value("-webkit-border-bottom-left-radius", 20, 10, 1);
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		-webkit-border-top-right-radius: 0;
+		-webkit-border-bottom-right-radius: 0;
 		border: 3px solid transparent;
 		background-color: $colorWhite;
 		color: $colorLightDark;
