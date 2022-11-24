@@ -258,17 +258,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		column-gap: 50px;
+		@include adaptive-value-desktop("column-gap", 50, 30, 1);
 		max-width: 1475px;
 		@include adaptive-value-tablet("height", 100, 75, 1);
 		margin: 0 auto;
 		padding: 0 20px;
 
-		@media (max-width: em(1024)) {
-			@include adaptive-value-tablet("column-gap", 50, 30, 0);
-		}
-
-		@media (max-width: em(768)) {
+		@media (max-width: em(1200)) {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			height: 100%;
@@ -277,6 +273,10 @@
 			@include adaptive-value-mobile("padding-right", 20, 10, 0);
 			@include adaptive-value-mobile("padding-bottom", 20, 10, 0);
 			@include adaptive-value-mobile("padding-left", 20, 10, 0);
+		}
+
+		@media (max-width: em(480)) {
+			justify-content: center;
 		}
 
 		@media (max-width: em(320)) {
@@ -293,24 +293,28 @@
 	max-width: 180px;
 	width: 100%;
 
-	@media (max-width: em(1024)) {
-		@include adaptive-value-tablet("max-width", 180, 158, 1);
-	}
-
-	@media (max-width: em(768)) {
+	@media (max-width: em(1200)) {
 		order: 1;
 		@include adaptive-value-mobile("column-gap", 20, 15, 0);
 		max-width: 45%;
 	}
 
-	@media (max-width: em(440)) {
+	@media (max-width: em(1024)) {
+		@include adaptive-value-tablet("max-width", 180, 158, 1);
+	}
+
+	@media (max-width: em(480)) {
+		width: 100%;
+	}
+
+	@media (max-width: em(640)) {
 		flex-direction: row;
-		width: 83px;
+		width: 15%;
 		justify-content: space-between;
 	}
 
 	@media (max-width: em(375)) {
-		width: 65px;
+		//width: 65px;
 	}
 
 	&__link {
@@ -330,7 +334,7 @@
 				height: 16px;
 			}
 
-			@media (max-width: em(440)) {
+			@media (max-width: em(640)) {
 				width: 30px;
 				height: 30px;
 			}
@@ -360,7 +364,7 @@
 				@include adaptive-value-mobile("line-height", 17, 15, 1);
 			}
 
-			@media (max-width: em(440)) {
+			@media (max-width: em(640)) {
 				display: none;
 			}
 		}
@@ -391,15 +395,14 @@
 .search-header {
 	display: flex;
 	align-items: center;
-	@include adaptive-value-desktop("max-width", 600, 420, 0);
+	@include adaptive-value-desktop("max-width", 600, 420, 1);
 	width: 100%;
-	//@include adaptive-value("border-radius", 20, 10, 1);
 
 	@media (max-width: em(1024)) {
-		@include adaptive-value-tablet("max-width", 420, 320, 0);
+		//@include adaptive-value-tablet("max-width", 420, 320, 0);
 	}
 
-	@media (max-width: em(768)) {
+	@media (max-width: em(1200)) {
 		order: 3;
 		max-width: 100%;
 	}
@@ -408,18 +411,14 @@
 		@include adaptive-value-desktop("max-width", 480, 320, 1);
 		width: 100%;
 		@include adaptive-value("height", 70, 40, 1);
-		@include adaptive-value-desktop("padding-top", 22, 15.75, 1);
-		padding-right: 10px;
-		@include adaptive-value-desktop("padding-bottom", 22, 15.75, 1);
+		@include adaptive-value("padding-top", 22, 7.5, 1);
+		padding-right: 20px;
+		@include adaptive-value("padding-bottom", 22, 7.5, 1);
 		padding-left: 20px;
 		@include adaptive-value("border-top-left-radius", 20, 10, 1);
 		@include adaptive-value("border-bottom-left-radius", 20, 10, 1);
-		//@include adaptive-value("-webkit-border-top-left-radius", 20, 10, 1);
-		//@include adaptive-value("-webkit-border-bottom-left-radius", 20, 10, 1);
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
-		//-webkit-border-top-right-radius: 0px;
-		//-webkit-border-bottom-right-radius: 0px;
 		border: 3px solid transparent;
 		background-color: $colorWhite;
 		color: $colorLightDark;
@@ -428,10 +427,12 @@
 		font-weight: 500;
 		transition: all 0.3s ease;
 
+		@media (max-width: em(1200)) {
+			max-width: 100%;
+		}
+
 		@media (max-width: em(1024)) {
-			@include adaptive-value-tablet("max-width", 320, 240, 0);
-			@include adaptive-value-tablet("padding-top", 15.75, 11, 0);
-			@include adaptive-value-tablet("padding-bottom", 15.75, 11, 0);
+			//@include adaptive-value-tablet("max-width", 320, 240, 0);
 			@include adaptive-value-tablet("font-size", 16, 14, 0);
 			@include adaptive-value-tablet("line-height", 20, 18, 0);
 		}
@@ -444,17 +445,13 @@
 		}
 
 		@media (max-width: em(768)) {
-			max-width: 100%;
-			@include adaptive-value-mobile("padding-top", 11, 7.5, 0);
-			@include adaptive-value-mobile("padding-bottom", 11, 7.5, 0);
 			@include adaptive-value-mobile("font-size", 14, 12, 0);
-			@include adaptive-value-mobile("line-height", 18, 15, 0);
+			@include adaptive-value-mobile("line-height", 18, 14, 0);
 		}
 
 		@media (max-width: em(320)) {
-			padding: 7.5px 20px;
 			font-size: 12px;
-			line-height: 15px;
+			line-height: 14px;
 		}
 
 		&:focus {
@@ -488,10 +485,10 @@
 	button {
 		max-width: 140px;
 		@include adaptive-value("height", 70, 40, 1);
-		@include adaptive-value-desktop("padding-top", 25, 18.75, 1);
-		@include adaptive-value-desktop("padding-right", 34, 25.5, 1);
-		@include adaptive-value-desktop("padding-bottom", 25, 18.75, 1);
-		@include adaptive-value-desktop("padding-left", 34, 25.5, 1);
+		@include adaptive-value("padding-top", 25, 10.5, 1);
+		@include adaptive-value("padding-right", 34, 14.25, 1);
+		@include adaptive-value("padding-bottom", 25, 10.5, 1);
+		@include adaptive-value("padding-left", 34, 14.25, 1);
 		background-color: $colorPeach;
 		@include adaptive-value("border-top-right-radius", 20, 10, 1);
 		@include adaptive-value("border-bottom-right-radius", 20, 10, 1);
@@ -504,10 +501,6 @@
 		transition: all 0.5s ease;
 
 		@media (max-width: em(1024)) {
-			@include adaptive-value-tablet("padding-top", 18.75, 14, 0);
-			@include adaptive-value-tablet("padding-right", 25.5, 19, 0);
-			@include adaptive-value-tablet("padding-bottom", 18.75, 14, 0);
-			@include adaptive-value-tablet("padding-left", 25.5, 19, 0);
 			@include adaptive-value-tablet("font-size", 16, 14, 0);
 			@include adaptive-value-tablet("line-height", 20, 18, 0);
 		}
@@ -519,16 +512,11 @@
 		}
 
 		@media (max-width: em(768)) {
-			@include adaptive-value-mobile("padding-top", 14, 10.5, 0);
-			@include adaptive-value-mobile("padding-right", 19, 14.25, 0);
-			@include adaptive-value-mobile("padding-bottom", 14, 10.5, 0);
-			@include adaptive-value-mobile("padding-left", 19, 14.25, 0);
 			@include adaptive-value-mobile("font-size", 14, 12, 0);
 			@include adaptive-value-mobile("line-height", 18, 15, 0);
 		}
 
 		@media (max-width: em(320)) {
-			padding: 10.5px 14.25px;
 			font-size: 12px;
 			line-height: 15px;
 		}
@@ -541,60 +529,36 @@
 
 .office-header {
 	position: relative;
-	display: flex;
-	column-gap: 1px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 1px;
+	grid-row-gap: 0;
 
-	@media (max-width: em(768)) {
+	@media (max-width: em(1200)) {
 		order: 2;
 	}
-
-	/*&:after {
-		content: "";
-		position: absolute;
-		top: 50%;
-		@include adaptive-value-desktop("left", 94, 89, 1);
-		@include adaptive-value-desktop("width", 40, 30, 1);
-		height: 1px;
-		background-color: rgba(255, 255, 255, 0.3);
-		transform: rotate(90deg);
-
-		@media (max-width: em(1024)) {
-			@include adaptive-value-tablet("left", 89, 89, 0);
-			width: 30px;
-		}
-
-		@media (max-width: em(768)) {
-			@include adaptive-value-mobile("left", 89, 94, 0);
-			@include adaptive-value-mobile("width", 30, 20, 0);
-		}
-
-		@media (max-width: em(320)) {
-			left: 94px;
-			width: 20px;
-		}
-	}*/
 }
 
-.office-btn--right,
-.office-btn--left {
+.office-btn {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	row-gap: 5px;
-	@include adaptive-value-desktop("width", 114, 104, 1);
+	@include adaptive-value("max-width", 100, 78, 1);
+	width: auto;
 	@include adaptive-value("height", 70, 40, 1);
 	@include adaptive-value("padding-top", 10, 6, 1);
-	@include adaptive-value("padding-right", 15, 8.5, 1);
+	@include adaptive-value("padding-right", 15, 4.5, 1);
 	@include adaptive-value("padding-bottom", 10, 6, 1);
-	@include adaptive-value("padding-left", 15, 8.5, 1);
+	@include adaptive-value("padding-left", 15, 4.5, 1);
 	background-color: $colorLightDark;
 	color: $colorWhite;
 	will-change: transform;
 	transition: all 0.5s ease;
 
 	@media (max-width: em(1024)) {
-		width: 104px;
+		//@include adaptive-value-tablet("max-width", 92, 87, 0);
 	}
 
 	@media (min-width: em(769)) {
@@ -602,6 +566,22 @@
 			background-color: #1b1f20;
 		}
 	}
+
+	@media (max-width: em(768)) {
+		//@include adaptive-value-mobile("max-width", 87, 78, 0);
+	}
+
+	/*@media (max-width: em(560)) {
+		width: 84px;
+	}
+
+	@media (max-width: em(375)) {
+		width: 82px;
+	}
+
+	@media (max-width: em(320)) {
+		width: 80px;
+	}*/
 
 	svg {
 		@include adaptive-value-desktop("width", 30, 24, 1);
@@ -622,12 +602,6 @@
 	span {
 		font-size: 12px;
 		line-height: 12px;
-
-		@media (max-width: em(1024)) {
-		}
-
-		@media (max-width: em(768)) {
-		}
 	}
 
 	&:active {
@@ -635,12 +609,22 @@
 	}
 }
 
-.office-btn--right {
+.office-btn--login {
 	@include adaptive-value("border-top-left-radius", 20, 10, 1);
 	@include adaptive-value("border-bottom-left-radius", 20, 10, 1);
 }
 
-.office-btn--left {
+.office-btn--registration {
+	@include adaptive-value("border-top-right-radius", 20, 10, 1);
+	@include adaptive-value("border-bottom-right-radius", 20, 10, 1);
+}
+
+.office-btn--orders {
+	@include adaptive-value("border-top-left-radius", 20, 10, 1);
+	@include adaptive-value("border-bottom-left-radius", 20, 10, 1);
+}
+
+.office-btn--exit {
 	@include adaptive-value("border-top-right-radius", 20, 10, 1);
 	@include adaptive-value("border-bottom-right-radius", 20, 10, 1);
 }
