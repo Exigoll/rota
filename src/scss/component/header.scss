@@ -309,8 +309,9 @@
 
 	@media (max-width: em(640)) {
 		flex-direction: row;
+		justify-content: center;
+		column-gap: 30px;
 		width: 15%;
-		justify-content: space-between;
 	}
 
 	@media (max-width: em(375)) {
@@ -530,13 +531,20 @@
 .office-header {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
 	grid-column-gap: 1px;
 	grid-row-gap: 0;
 
 	@media (max-width: em(1200)) {
 		order: 2;
 	}
+}
+
+.auth {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.not-auth {
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .office-btn {
@@ -557,31 +565,11 @@
 	will-change: transform;
 	transition: all 0.5s ease;
 
-	@media (max-width: em(1024)) {
-		//@include adaptive-value-tablet("max-width", 92, 87, 0);
-	}
-
 	@media (min-width: em(769)) {
 		&:hover {
 			background-color: #1b1f20;
 		}
 	}
-
-	@media (max-width: em(768)) {
-		//@include adaptive-value-mobile("max-width", 87, 78, 0);
-	}
-
-	/*@media (max-width: em(560)) {
-		width: 84px;
-	}
-
-	@media (max-width: em(375)) {
-		width: 82px;
-	}
-
-	@media (max-width: em(320)) {
-		width: 80px;
-	}*/
 
 	svg {
 		@include adaptive-value-desktop("width", 30, 24, 1);
@@ -609,21 +597,18 @@
 	}
 }
 
-.office-btn--login {
-	@include adaptive-value("border-top-left-radius", 20, 10, 1);
-	@include adaptive-value("border-bottom-left-radius", 20, 10, 1);
-}
-
+.office-btn--login,
 .office-btn--registration {
-	@include adaptive-value("border-top-right-radius", 20, 10, 1);
-	@include adaptive-value("border-bottom-right-radius", 20, 10, 1);
+	@include adaptive-value("max-width", 112, 100, 1);
 }
 
+.office-btn--login,
 .office-btn--orders {
 	@include adaptive-value("border-top-left-radius", 20, 10, 1);
 	@include adaptive-value("border-bottom-left-radius", 20, 10, 1);
 }
 
+.office-btn--registration,
 .office-btn--exit {
 	@include adaptive-value("border-top-right-radius", 20, 10, 1);
 	@include adaptive-value("border-bottom-right-radius", 20, 10, 1);
