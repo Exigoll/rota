@@ -393,6 +393,7 @@
 	align-items: center;
 	@include adaptive-value-desktop("max-width", 600, 420, 0);
 	width: 100%;
+	@include adaptive-value("border-radius", 20, 10, 1);
 
 	@media (max-width: em(1024)) {
 		@include adaptive-value-tablet("max-width", 420, 320, 0);
@@ -535,7 +536,7 @@
 .office-header {
 	position: relative;
 	display: flex;
-	column-gap: 0.5px;
+	column-gap: 1px;
 
 	@media (max-width: em(768)) {
 		order: 2;

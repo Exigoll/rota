@@ -1582,6 +1582,7 @@ main {
 			420px + 180 * ((100vw - 1024px) / 896)
 		);
   width: 100%;
+  border-radius: 20px;
 }
 
 .search-header input {
@@ -1678,9 +1679,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 0.5px;
-     -moz-column-gap: 0.5px;
-          column-gap: 0.5px;
+  -webkit-column-gap: 1px;
+     -moz-column-gap: 1px;
+          column-gap: 1px;
   /*&:after {
   	content: "";
   	position: absolute;
@@ -2393,6 +2394,13 @@ main {
     line-height: calc(
 				17px + 2 *
 					((100vw - 1024px) / 451)
+			);
+  }
+
+  .search-header {
+    border-radius: calc(
+				10px + 10 *
+					((100vw - 320px) / 1155)
 			);
   }
 
