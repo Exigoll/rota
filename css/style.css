@@ -1677,10 +1677,18 @@ main {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1px;
   grid-row-gap: 0;
+}
+
+.auth {
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.not-auth {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .office-btn {
@@ -1711,17 +1719,6 @@ main {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  /*@media (max-width: em(560)) {
-  	width: 84px;
-  }
-
-  @media (max-width: em(375)) {
-  	width: 82px;
-  }
-
-  @media (max-width: em(320)) {
-  	width: 80px;
-  }*/
 }
 
 .office-btn svg {
@@ -1744,21 +1741,18 @@ main {
           transform: scale(0.96);
 }
 
-.office-btn--login {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
+.office-btn--login,
 .office-btn--registration {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  max-width: 112px;
 }
 
+.office-btn--login,
 .office-btn--orders {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
+.office-btn--registration,
 .office-btn--exit {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -2557,34 +2551,15 @@ main {
 			);
   }
 
-  .office-btn--login {
-    border-top-left-radius: calc(
-				10px + 10 *
-					((100vw - 320px) / 1155)
-			);
-  }
-
-  .office-btn--login {
-    border-bottom-left-radius: calc(
-				10px + 10 *
-					((100vw - 320px) / 1155)
-			);
-  }
-
+  .office-btn--login,
   .office-btn--registration {
-    border-top-right-radius: calc(
-				10px + 10 *
+    max-width: calc(
+				100px + 12 *
 					((100vw - 320px) / 1155)
 			);
   }
 
-  .office-btn--registration {
-    border-bottom-right-radius: calc(
-				10px + 10 *
-					((100vw - 320px) / 1155)
-			);
-  }
-
+  .office-btn--login,
   .office-btn--orders {
     border-top-left-radius: calc(
 				10px + 10 *
@@ -2592,6 +2567,7 @@ main {
 			);
   }
 
+  .office-btn--login,
   .office-btn--orders {
     border-bottom-left-radius: calc(
 				10px + 10 *
@@ -2599,6 +2575,7 @@ main {
 			);
   }
 
+  .office-btn--registration,
   .office-btn--exit {
     border-top-right-radius: calc(
 				10px + 10 *
@@ -2606,6 +2583,7 @@ main {
 			);
   }
 
+  .office-btn--registration,
   .office-btn--exit {
     border-bottom-right-radius: calc(
 				10px + 10 *
@@ -3068,6 +3046,15 @@ main {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+}
+
+@media (max-width: 75em) and (max-width: 1475px) {
+  .bottom-header__container {
+    row-gap: calc(
+				15px + 5 *
+					((100vw - 320px) / 1155)
+			);
   }
 }
 
@@ -4107,10 +4094,13 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
     width: 15%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 
   .contacts-header__link svg {
