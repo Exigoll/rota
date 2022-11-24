@@ -1582,7 +1582,6 @@ main {
 			420px + 180 * ((100vw - 1024px) / 896)
 		);
   width: 100%;
-  border-radius: 20px;
 }
 
 .search-header input {
@@ -1597,6 +1596,10 @@ main {
   border-bottom-left-radius: 20px;
   -webkit-border-top-left-radius: 20px;
   -webkit-border-bottom-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
   border: 3px solid transparent;
   background-color: #fff;
   color: #2e3536;
@@ -2396,13 +2399,6 @@ main {
     line-height: calc(
 				17px + 2 *
 					((100vw - 1024px) / 451)
-			);
-  }
-
-  .search-header {
-    border-radius: calc(
-				10px + 10 *
-					((100vw - 320px) / 1155)
 			);
   }
 
