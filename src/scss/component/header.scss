@@ -268,7 +268,7 @@
 			flex-wrap: wrap;
 			justify-content: space-between;
 			height: 100%;
-			row-gap: 20px;
+			@include adaptive-value("row-gap", 20, 15, 1);
 			@include adaptive-value-mobile("padding-top", 20, 10, 0);
 			@include adaptive-value-mobile("padding-right", 20, 10, 0);
 			@include adaptive-value-mobile("padding-bottom", 20, 10, 0);

@@ -3049,6 +3049,15 @@ main {
   }
 }
 
+@media (max-width: 75em) and (max-width: 1475px) {
+  .bottom-header__container {
+    row-gap: calc(
+				15px + 5 *
+					((100vw - 320px) / 1155)
+			);
+  }
+}
+
 @media (max-width: 64em) {
   .wrapper {
     padding-top: calc(
