@@ -314,10 +314,6 @@
 		width: 15%;
 	}
 
-	@media (max-width: em(375)) {
-		//width: 65px;
-	}
-
 	&__link {
 		display: flex;
 		align-items: center;
@@ -399,10 +395,6 @@
 	@include adaptive-value-desktop("max-width", 600, 420, 1);
 	width: 100%;
 
-	@media (max-width: em(1024)) {
-		//@include adaptive-value-tablet("max-width", 420, 320, 0);
-	}
-
 	@media (max-width: em(1200)) {
 		order: 3;
 		max-width: 100%;
@@ -433,7 +425,6 @@
 		}
 
 		@media (max-width: em(1024)) {
-			//@include adaptive-value-tablet("max-width", 320, 240, 0);
 			@include adaptive-value-tablet("font-size", 16, 14, 0);
 			@include adaptive-value-tablet("line-height", 20, 18, 0);
 		}
