@@ -48,62 +48,59 @@
 			max-width: 300px;
 			grid-column-gap: 20px;
 		}
-
-		li {
-			justify-self: center;
-
-			&:first-child {
-				svg {
-					@include adaptive-value-desktop("width", 82, 61, 1);
-
-					@media (max-width: em(1024)) {
-						@include adaptive-value-tablet("width", 61, 40, 0);
-					}
-
-					@media (max-width: em(768)) {
-						@include adaptive-value-mobile("width", 40, 30, 0);
-					}
-
-					@media (max-width: em(320)) {
-						width: 30px;
-					}
-				}
-			}
-		}
 	}
 
 	&__item {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		justify-self: center;
 		@include adaptive-value-desktop("width", 220, 180, 1);
-		padding: 20px 5px 30px;
+		padding: 20px 10px 30px;
 		background-color: $colorWhite;
-		@include adaptive-value-desktop("border-radius", 20, 18, 1);
+		@include adaptive-value("border-radius", 20, 10, 1);
 		box-shadow: 5px 10px 20px 5px rgb(0 0 0 / 20%);
 		cursor: pointer;
 		transition: all 0.5s ease;
 		will-change: transform;
 
+		&:first-child {
+			svg {
+				@include adaptive-value-desktop("width", 82, 61, 1);
+
+				@media (max-width: em(1024)) {
+					@include adaptive-value-tablet("width", 61, 40, 0);
+				}
+
+				@media (max-width: em(768)) {
+					@include adaptive-value-mobile("width", 40, 30, 0);
+				}
+
+				@media (max-width: em(320)) {
+					width: 30px;
+				}
+			}
+		}
+
 		@media (max-width: em(1024)) {
 			@include adaptive-value-tablet("width", 180, 150, 0);
-			@include adaptive-value-tablet("padding-top", 20, 30, 0);
-			@include adaptive-value-tablet("padding-bottom", 30, 40, 0);
+			@include adaptive-value-tablet("padding-top", 20, 15, 0);
+			@include adaptive-value-tablet("padding-bottom", 30, 20, 0);
 		}
 
 		@media (min-width: em(769)) {
 			&:hover {
-				transform: scale(0.98);
-
 				svg {
 					fill: $colorDarkBlue;
+					transform: scale(1.1);
 				}
 			}
 		}
 
 		@media (max-width: em(768)) {
 			@include adaptive-value-mobile("width", 150, 140, 0);
-			@include adaptive-value-mobile("padding-top", 30, 17, 0);
-			@include adaptive-value-mobile("padding-right", 5, 4, 0);
-			@include adaptive-value-mobile("padding-bottom", 40, 17, 0);
-			@include adaptive-value-mobile("padding-left", 5, 4, 0);
+			padding-top: 15px;
+			padding-bottom: 20px;
 		}
 
 		@media (max-width: em(706)) {
@@ -115,7 +112,6 @@
 		}
 
 		@media (max-width: em(320)) {
-			padding: 17px 4px;
 		}
 
 		&:active {
@@ -130,13 +126,18 @@
 		row-gap: 18px;
 
 		@media (max-width: em(1024)) {
-			@include adaptive-value-tablet("row-gap", 18, 13, 1);
+			@include adaptive-value-tablet("row-gap", 18, 10, 1);
+		}
+
+		@media (max-width: em(768)) {
+			row-gap: 10px;
 		}
 
 		svg {
 			@include adaptive-value-desktop("width", 110, 82, 1);
 			@include adaptive-value-desktop("height", 110, 82, 1);
 			fill: $colorLightDark;
+			will-change: transform;
 			transition: all 0.5s ease;
 
 			@media (max-width: em(1024)) {
@@ -156,7 +157,8 @@
 		}
 
 		h3 {
-			font-weight: 900;
+			height: auto;
+			font-weight: 700;
 			@include adaptive-value-desktop("font-size", 18, 17, 1);
 			@include adaptive-value-desktop("line-height", 22, 20, 1);
 			text-align: center;

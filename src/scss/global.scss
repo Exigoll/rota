@@ -69,15 +69,15 @@ main {
 	@include adaptive-value-desktop("padding-top", 200, 168, 1);
 
 	@media (max-width: em(1024)) {
-		@include adaptive-value-tablet("padding-top", 168, 150, 0);
+		@include adaptive-value-tablet("padding-top", 270, 235, 0);
 	}
 
 	@media (max-width: em(768)) {
-		@include adaptive-value-mobile("padding-top", 242, 172, 0);
+		@include adaptive-value-mobile("padding-top", 235, 204, 0);
 	}
 
 	@media (max-width: em(320)) {
-		padding-top: 172px;
+		padding-top: 204px;
 	}
 }
 

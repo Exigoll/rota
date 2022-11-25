@@ -264,7 +264,7 @@
 		margin: 0 auto;
 		padding: 0 20px;
 
-		@media (max-width: em(1200)) {
+		@media (max-width: em(1024)) {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			height: 100%;
@@ -293,7 +293,7 @@
 	max-width: 180px;
 	width: 100%;
 
-	@media (max-width: em(1200)) {
+	@media (max-width: em(1024)) {
 		order: 1;
 		@include adaptive-value-mobile("column-gap", 20, 15, 0);
 		max-width: 45%;
@@ -395,7 +395,7 @@
 	@include adaptive-value-desktop("max-width", 600, 420, 1);
 	width: 100%;
 
-	@media (max-width: em(1200)) {
+	@media (max-width: em(1024)) {
 		order: 3;
 		max-width: 100%;
 	}
@@ -420,11 +420,8 @@
 		font-weight: 500;
 		transition: all 0.3s ease;
 
-		@media (max-width: em(1200)) {
-			max-width: 100%;
-		}
-
 		@media (max-width: em(1024)) {
+			max-width: 100%;
 			@include adaptive-value-tablet("font-size", 16, 14, 0);
 			@include adaptive-value-tablet("line-height", 20, 18, 0);
 		}
@@ -524,8 +521,9 @@
 	display: grid;
 	grid-column-gap: 1px;
 	grid-row-gap: 0;
+	width: auto;
 
-	@media (max-width: em(1200)) {
+	@media (max-width: em(1024)) {
 		order: 2;
 	}
 }
@@ -545,7 +543,6 @@
 	justify-content: center;
 	row-gap: 5px;
 	@include adaptive-value("max-width", 100, 78, 1);
-	width: auto;
 	@include adaptive-value("height", 70, 40, 1);
 	@include adaptive-value("padding-top", 10, 6, 1);
 	@include adaptive-value("padding-right", 15, 4.5, 1);
