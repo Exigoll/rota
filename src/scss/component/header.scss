@@ -530,6 +530,19 @@
 
 .auth {
 	grid-template-columns: repeat(4, 1fr);
+	@include adaptive-value-desktop("width", 403, 366, 1);
+
+	@media (max-width: em(1024)) {
+		@include adaptive-value-tablet("width", 366, 345, 0);
+	}
+
+	@media (max-width: em(768)) {
+		@include adaptive-value-mobile("width", 345, 300, 0);
+	}
+
+	@media (max-width: em(320)) {
+		width: 300px;
+	}
 }
 
 .not-auth {
