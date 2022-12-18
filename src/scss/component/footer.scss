@@ -89,6 +89,7 @@
 .sublist-footer {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	@include adaptive-value-desktop("row-gap", 20, 15, 1);
 
 	@media (max-width: em(1024)) {
@@ -109,6 +110,7 @@
 		@include adaptive-value-desktop("font-size", 16, 14, 1);
 		@include adaptive-value-desktop("line-height", 20, 17, 1);
 		transition: all 0.5s ease;
+		will-change: transform;
 
 		@media (max-width: em(1024)) {
 			font-size: 14px;
