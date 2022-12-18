@@ -2,30 +2,8 @@
 
 .footer {
 	position: relative;
-	//@include adaptive-value-desktop("height", 271, 226, 1);
 	background-color: $colorDarkBlue;
 	color: $colorWhite;
-
-	@media (max-width: em(1024)) {
-		//height: 226px;
-		//@include adaptive-value-tablet("height", 246, 246, 0);
-	}
-
-	@media (max-width: em(768)) {
-		//height: 211px;
-	}
-
-	@media (max-width: em(767)) {
-		//height: 345px;
-	}
-
-	@media (max-width: em(552)) {
-		//@include adaptive-value-mobile("height", 496, 535, 1);
-	}
-
-	@media (max-width: em(320)) {
-		//height: 535px;
-	}
 
 	&:after {
 		content: "";
@@ -38,9 +16,6 @@
 
 		@media (max-width: em(1024)) {
 			top: 172px;
-		}
-
-		@media (max-width: em(768)) {
 		}
 
 		@media (max-width: em(767)) {
@@ -68,9 +43,6 @@
 	display: flex;
 	justify-content: space-between;
 
-	@media (max-width: em(1024)) {
-	}
-
 	@media (max-width: em(767)) {
 		flex-wrap: wrap;
 		justify-content: flex-start;
@@ -79,10 +51,6 @@
 
 		li:nth-child(3) {
 			width: 100%;
-
-			@media (max-width: em(552)) {
-				//top: 558px;
-			}
 		}
 	}
 
