@@ -14,12 +14,20 @@ body {
 	height: 100%;
 }
 
+html {
+	overflow-y: scroll;
+}
+
 body {
 	position: relative;
 	font-family: $fontMontserrat;
 	color: $colorLightDark;
 	background-color: $colorWhite;
 }
+/*
+body[style*="overflow: hidden"] {
+	margin-right: 17px;
+} */
 
 h1,
 h2,
