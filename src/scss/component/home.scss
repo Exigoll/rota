@@ -522,6 +522,7 @@
 	width: 140px;
 	margin-top: 20px;
 	margin-left: auto;
+	will-change: transform;
 	transition: all 0.5s ease;
 
 	@media (min-width: em(769)) {

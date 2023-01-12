@@ -1,10 +1,13 @@
 .about {
-	padding-top: 30px;
+	max-width: 50%;
+	margin: 0 auto;
+	padding-top: 50px;
 
 	&__content {
 		display: flex;
 		flex-direction: column;
-		row-gap: 30px;
-		font-size: 16px;
+		row-gap: 20px;
+		font-size: 20px;
+		text-align: justify;
 	}
 }

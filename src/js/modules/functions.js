@@ -1,6 +1,5 @@
-/* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
+/* Webp support check*/
 export function isWebp() {
-	// Проверка поддержки webp
 	function testWebP(callback) {
 		let webP = new Image();
 		webP.onload = webP.onerror = function () {
@@ -9,7 +8,6 @@ export function isWebp() {
 		webP.src =
 			"data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 	}
-	// Добавление класса _webp или _no-webp для HTML
 	testWebP(function (support) {
 		let className = support == true ? "webp" : "no-webp";
 		document.documentElement.classList.add(className);
@@ -19,6 +17,7 @@ export function isWebp() {
 /*Burger-menu*/
 const iconMenu = document.querySelector(".navigation-header__icon");
 const menuBody = document.querySelector(".menu-header__list");
+
 if (iconMenu) {
 	iconMenu.addEventListener("click", function (e) {
 		document.body.classList.toggle("_lock");
@@ -36,3 +35,26 @@ for (let i = 0; i < menuLength; i++) {
 		menuItem[i].className = "menu-header__link--active";
 	}
 }
+
+/* Modal-window Login*/
+const btn = document.querySelectorAll(".office-btn--login");
+const modalOverlay = document.querySelector(".modal-overlay");
+
+btn.forEach(el => {
+	el.addEventListener("click", e => {
+		let path = e.currentTarget.getAttribute("data-path");
+
+		document
+			.querySelector(`[data-target="${path}"]`)
+			.classList.add("modal--visible");
+		modalOverlay.classList.add("modal-overlay--visible");
+		document.body.style.overflow = "hidden";
+	});
+});
+
+modalOverlay.addEventListener("click", e => {
+	if (e.target == modalOverlay) {
+		modalOverlay.classList.remove("modal-overlay--visible");
+		document.body.style.overflow = "";
+	}
+});
