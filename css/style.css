@@ -1312,12 +1312,21 @@ body {
   height: 100%;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   position: relative;
   font-family: "Montserrat", sans-serif;
   color: #2e3536;
   background-color: #fff;
 }
+
+/*
+body[style*="overflow: hidden"] {
+	margin-right: 17px;
+} */
 
 h1,
 h2,
@@ -1407,6 +1416,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
+  margin-right: 17px;
   z-index: 100;
 }
 
