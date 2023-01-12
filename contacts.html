@@ -14,8 +14,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Roboto:wght@300;400&display=swap&_v=20221218201013" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20221218201013">
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Roboto:wght@300;400&display=swap&_v=20230112161424" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230112161424">
 	<title>Контакты</title>
 </head>
 
@@ -37,16 +37,22 @@
 				<nav class="navigation-header__menu menu-header">
 					<ul class="menu-header__list">
 						<li class="menu-header__item">
-							<a class="menu-header__link menu-header__link" href="./">Главная</a>
+							<a class="menu-header__link menu-header__link" href="./"
+								>Главная</a
+							>
 						</li>
 						<li class="menu-header__item">
 							<a class="menu-header__link" href="./about.html">О нас</a>
 						</li>
 						<li class="menu-header__item">
-							<a class="menu-header__link" href="./provider.html">Поставщикам</a>
+							<a class="menu-header__link" href="./provider.html"
+								>Поставщикам</a
+							>
 						</li>
 						<li class="menu-header__item">
-							<a class="menu-header__link" href="./wholesale.html">Оптовым клиентам</a>
+							<a class="menu-header__link" href="./wholesale.html"
+								>Оптовым клиентам</a
+							>
 						</li>
 						<li class="menu-header__item">
 							<a class="menu-header__link" href="./contacts.html">Контакты</a>
@@ -54,7 +60,6 @@
 					</ul>
 				</nav>
 			</div>
-
 		</div>
 	</div>
 	<div class="header__bottom bottom-header">
@@ -70,17 +75,25 @@
 				</a>
 			</div>
 			<div class="bottom-header__search search-header">
-				<input type="text" placeholder="Введите VIN номер детали">
+				<input type="text" placeholder="Введите VIN номер детали" />
 				<button type="submit">Найти</button>
 			</div>
 			<!--Офис не авторизированного пользователя-->
 			<div class="bottom-header__office office-header not-auth">
-				<a class="office-btn office-btn--login" href="./login.html">
-					<svg><use xlink:href="./assets/img/icons/icons.svg#login"></use></svg>
+				<button class="office-btn office-btn--login" data-path="popup-login">
+					<svg>
+						<use xlink:href="./assets/img/icons/icons.svg#login"></use>
+					</svg>
 					<span>Вход</span>
-				</a>
-				<a class="office-btn office-btn--registration" href="./registration.html">
-					<svg><use xlink:href="./assets/img/icons/icons.svg#registration"></use></svg>
+				</button>
+
+				<a
+					class="office-btn office-btn--registration"
+					href="./registration.html"
+				>
+					<svg>
+						<use xlink:href="./assets/img/icons/icons.svg#registration"></use>
+					</svg>
 					<span>Регистрация</span>
 				</a>
 			</div>
@@ -103,6 +116,50 @@
 					<span>Выход</span>
 				</a>
 			</div>-->
+		</div>
+		<div class="modal-overlay">
+			<div class="modal" data-target="popup-login">
+				<div class="modal__title title-modal">Авторизация</div>
+				<form class="modal__form form-modal">
+					<div class="form-modal__inputs inputs-modal">
+						<div class="inputs-modal__input input-login">
+							<label for="login"></label>
+							<input
+								type="text"
+								name="login"
+								id="login"
+								placeholder="Введите логин"
+							/>
+						</div>
+						<div class="inputs-modal__input input-password">
+							<label for="password"></label>
+							<input
+								type="password"
+								name="password"
+								id="password"
+								placeholder="Введите пароль"
+							/>
+						</div>
+						<div class="input-checkbox">
+							<label for="checkbox">Запомнить меня</label>
+							<input type="checkbox" name="checkbox" id="checkbox" />
+						</div>
+					</div>
+					<div class="form-modal__buttons buttons-modal">
+						<button
+							class="buttons-modal__button buttons-modal__button--registration"
+						>
+							<a href="../registration.html"> Регистрация </a>
+						</button>
+						<button class="buttons-modal__button buttons-modal__button--auth">
+							Вход
+						</button>
+					</div>
+				</form>
+				<a href="#" class="form-modal__recovery recovery-modal">
+					Восстановить доступ к аккаунту
+				</a>
+			</div>
 		</div>
 	</div>
 </header>
@@ -180,6 +237,6 @@
 	</div>
 </footer>
 
-<script src='js/app.min.js?_v=20221218201013'></script>
+<script src='js/app.min.js?_v=20230112161424'></script>
 </body>
 </html>

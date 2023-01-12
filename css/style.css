@@ -1377,10 +1377,29 @@ main {
 
 .title {
   padding-bottom: 30px;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 36px;
   line-height: 44px;
   color: #2e3536;
+}
+
+.about {
+  max-width: 50%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  font-size: 20px;
+  text-align: justify;
 }
 
 .header {
@@ -1728,6 +1747,7 @@ main {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .office-btn svg {
@@ -1765,6 +1785,316 @@ main {
 .office-btn--exit {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal {
+  display: none;
+}
+
+.modal--visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 35px;
+  width: 520px;
+  height: 425px;
+  border-radius: 20px;
+  background-color: #e9e9e9;
+}
+
+.title-modal {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  /* @media (max-width: em(1024)) {
+  	@include adaptive-value-tablet("font-size", 20, 18, 0);
+  	@include adaptive-value-tablet("line-height", 24, 22, 0);
+  } */
+  /* @media (max-width: em(768)) {
+  	@include adaptive-value-mobile("font-size", 18, 14, 0);
+  	@include adaptive-value-mobile("line-height", 22, 18, 0);
+  } */
+  /* @media (max-width: em(320)) {
+  	font-size: 14px;
+  	line-height: 18px;
+  } */
+}
+
+.form-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 30px;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.inputs-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 20px;
+  max-width: 320px;
+  width: 100%;
+}
+
+.inputs-modal__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.inputs-modal__input input {
+  max-width: 320px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border: 3px solid transparent;
+  background-color: #fff;
+  color: #2e3536;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.inputs-modal__input input::-webkit-input-placeholder {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.inputs-modal__input input::-moz-placeholder {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.inputs-modal__input input:-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.inputs-modal__input input::-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.inputs-modal__input input::placeholder {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.inputs-modal__input input:focus {
+  border: 3px solid #1b2f52;
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.input-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.input-checkbox label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  cursor: pointer;
+}
+
+.buttons-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 320px;
+  width: 100%;
+}
+
+.buttons-modal__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 140px;
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.buttons-modal__button:active {
+  -webkit-transform: scale(0.96);
+      -ms-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.buttons-modal__button--registration {
+  background-color: #e77c58;
+}
+
+.buttons-modal__button--registration:hover {
+  border: 1px solid #e77c58;
+  background-color: #fff;
+  color: #2e3536;
+}
+
+.buttons-modal__button--auth {
+  background-color: #1b2f52;
+}
+
+.buttons-modal__button--auth:hover {
+  border: 1px solid #1b2f52;
+  background-color: #fff;
+  color: #2e3536;
+}
+
+.recovery-modal {
+  border-bottom: 2px solid transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+
+.recovery-modal:hover {
+  border-bottom: 2px solid #e77c58;
+}
+
+.recovery-modal:active {
+  -webkit-transform: scale(0.96);
+      -ms-transform: scale(0.96);
+          transform: scale(0.96);
 }
 
 .footer {
@@ -1824,6 +2154,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   row-gap: 20px;
 }
 
@@ -1839,6 +2172,7 @@ main {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  will-change: transform;
 }
 
 .sublist-footer__link svg {
@@ -2176,6 +2510,7 @@ main {
   width: 140px;
   margin-top: 20px;
   margin-left: auto;
+  will-change: transform;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -2242,6 +2577,12 @@ main {
 
   .office-btn:hover {
     background-color: #1b1f20;
+  }
+
+  .inputs-modal__input input:hover {
+    border: 3px solid #1b2f52;
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
   }
 
   .sublist-footer__link:hover {
@@ -2627,6 +2968,27 @@ main {
     border-bottom-right-radius: calc(
 				10px + 10 *
 					((100vw - 320px) / 1155)
+			);
+  }
+
+  .modal--visible {
+    border-radius: calc(
+				10px + 10 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .title-modal {
+    font-size: calc(
+				20px + 2 *
+					((100vw - 1024px) / 451)
+			);
+  }
+
+  .title-modal {
+    line-height: calc(
+				24px + 3 *
+					((100vw - 1024px) / 451)
 			);
   }
 
@@ -4300,9 +4662,9 @@ main {
     position: absolute;
     width: 100%;
     height: 4px;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background-color: #fff;
     border-radius: 20px;
   }
@@ -4370,9 +4732,9 @@ main {
     padding: 100px 30px 0;
     background-color: rgba(0, 0, 0, 0.9);
     overflow: auto;
-    -webkit-transition: right 0.5s ease 0s;
-    -o-transition: right 0.5s ease 0s;
-    transition: right 0.5s ease 0s;
+    -webkit-transition: right 0.5s ease-in-out;
+    -o-transition: right 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out;
     z-index: 1;
   }
 
