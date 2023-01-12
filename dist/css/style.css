@@ -1825,6 +1825,7 @@ main {
 .modal-overlay--visible {
   opacity: 1;
   visibility: visible;
+  z-index: 6;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1859,18 +1860,6 @@ main {
   font-weight: 700;
   font-size: 22px;
   line-height: 27px;
-  /* @media (max-width: em(1024)) {
-  	@include adaptive-value-tablet("font-size", 20, 18, 0);
-  	@include adaptive-value-tablet("line-height", 24, 22, 0);
-  } */
-  /* @media (max-width: em(768)) {
-  	@include adaptive-value-mobile("font-size", 18, 14, 0);
-  	@include adaptive-value-mobile("line-height", 22, 18, 0);
-  } */
-  /* @media (max-width: em(320)) {
-  	font-size: 14px;
-  	line-height: 18px;
-  } */
 }
 
 .form-modal {
@@ -2069,20 +2058,8 @@ main {
   background-color: #e77c58;
 }
 
-.buttons-modal__button--registration:hover {
-  border: 1px solid #e77c58;
-  background-color: #fff;
-  color: #2e3536;
-}
-
 .buttons-modal__button--auth {
   background-color: #1b2f52;
-}
-
-.buttons-modal__button--auth:hover {
-  border: 1px solid #1b2f52;
-  background-color: #fff;
-  color: #2e3536;
 }
 
 .recovery-modal {
@@ -2095,10 +2072,6 @@ main {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   will-change: transform;
-}
-
-.recovery-modal:hover {
-  border-bottom: 2px solid #e77c58;
 }
 
 .recovery-modal:active {
@@ -2593,6 +2566,22 @@ main {
     border: 3px solid #1b2f52;
     -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .buttons-modal__button--registration:hover {
+    border: 1px solid #e77c58;
+    background-color: #fff;
+    color: #2e3536;
+  }
+
+  .buttons-modal__button--auth:hover {
+    border: 1px solid #1b2f52;
+    background-color: #fff;
+    color: #2e3536;
+  }
+
+  .recovery-modal:hover {
+    border-bottom: 2px solid #e77c58;
   }
 
   .sublist-footer__link:hover {

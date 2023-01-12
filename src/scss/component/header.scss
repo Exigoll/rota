@@ -634,6 +634,7 @@
 	&--visible {
 		opacity: 1;
 		visibility: visible;
+		z-index: 6;
 		transition: all 0.3s ease-in-out;
 	}
 }
@@ -658,21 +659,6 @@
 	font-weight: 700;
 	@include adaptive-value-desktop("font-size", 22, 20, 1);
 	@include adaptive-value-desktop("line-height", 27, 24, 1);
-
-	/* @media (max-width: em(1024)) {
-		@include adaptive-value-tablet("font-size", 20, 18, 0);
-		@include adaptive-value-tablet("line-height", 24, 22, 0);
-	} */
-
-	/* @media (max-width: em(768)) {
-		@include adaptive-value-mobile("font-size", 18, 14, 0);
-		@include adaptive-value-mobile("line-height", 22, 18, 0);
-	} */
-
-	/* @media (max-width: em(320)) {
-		font-size: 14px;
-		line-height: 18px;
-	} */
 }
 
 .form-modal {
@@ -787,20 +773,24 @@
 		&--registration {
 			background-color: $colorPeach;
 
-			&:hover {
-				border: 1px solid $colorPeach;
-				background-color: $colorWhite;
-				color: $colorLightDark;
+			@media (min-width: em(769)) {
+				&:hover {
+					border: 1px solid $colorPeach;
+					background-color: $colorWhite;
+					color: $colorLightDark;
+				}
 			}
 		}
 
 		&--auth {
 			background-color: $colorDarkBlue;
 
-			&:hover {
-				border: 1px solid $colorDarkBlue;
-				background-color: $colorWhite;
-				color: $colorLightDark;
+			@media (min-width: em(769)) {
+				&:hover {
+					border: 1px solid $colorDarkBlue;
+					background-color: $colorWhite;
+					color: $colorLightDark;
+				}
 			}
 		}
 	}
@@ -815,8 +805,10 @@
 	transition: all 0.3s ease;
 	will-change: transform;
 
-	&:hover {
-		border-bottom: 2px solid $colorPeach;
+	@media (min-width: em(769)) {
+		&:hover {
+			border-bottom: 2px solid $colorPeach;
+		}
 	}
 
 	&:active {
