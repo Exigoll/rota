@@ -1996,7 +1996,7 @@ main {
 .input-checkbox label {
   font-weight: 400;
   font-size: 14px;
-  line-height: 12px;
+  line-height: 17px;
   cursor: pointer;
 }
 
@@ -2034,12 +2034,14 @@ main {
           justify-content: center;
   max-width: 140px;
   width: 100%;
-  padding: 10px 0;
+  padding: 11px 0;
   border: 1px solid transparent;
-  border-radius: 20px;
+  border-radius: calc(
+			15px + 5 * ((100vw - 320px) / 1600)
+		);
   color: #fff;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 16px;
   font-weight: 500;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -2067,7 +2069,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 17px;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -2974,20 +2976,6 @@ main {
     border-radius: calc(
 				10px + 10 *
 					((100vw - 320px) / 1155)
-			);
-  }
-
-  .title-modal {
-    font-size: calc(
-				20px + 2 *
-					((100vw - 1024px) / 451)
-			);
-  }
-
-  .title-modal {
-    line-height: calc(
-				24px + 3 *
-					((100vw - 1024px) / 451)
 			);
   }
 
@@ -4088,6 +4076,263 @@ main {
 		);
   }
 
+  .modal--visible {
+    row-gap: calc(
+			25px +
+				10 *
+				((100vw - 320px) / 448)
+		);
+    width: calc(
+			300px +
+				220 *
+				((100vw - 320px) / 448)
+		);
+    height: calc(
+			300px +
+				125 *
+				((100vw - 320px) / 448)
+		);
+    margin-right: calc(
+			10px +
+				10 *
+				((100vw - 320px) / 448)
+		);
+    margin-left: calc(
+			10px +
+				10 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .title-modal {
+    font-size: calc(
+			18px +
+				4 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			22px +
+				5 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .form-modal {
+    row-gap: calc(
+			20px +
+				10 *
+				((100vw - 320px) / 448)
+		);
+    max-width: calc(
+			260px +
+				60 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .inputs-modal {
+    row-gap: calc(
+			15px +
+				5 *
+				((100vw - 320px) / 448)
+		);
+    max-width: calc(
+			260px +
+				60 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .inputs-modal__input {
+    max-width: calc(
+			260px +
+				60 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .inputs-modal__input input {
+    max-width: calc(
+			260px +
+				60 *
+				((100vw - 320px) / 448)
+		);
+    height: calc(
+			30px +
+				10 *
+				((100vw - 320px) / 448)
+		);
+    padding-top: calc(
+			7.5px +
+				2.5 *
+				((100vw - 320px) / 448)
+		);
+    padding-right: calc(
+			15px +
+				5 *
+				((100vw - 320px) / 448)
+		);
+    padding-bottom: calc(
+			7.5px +
+				2.5 *
+				((100vw - 320px) / 448)
+		);
+    padding-left: calc(
+			15px +
+				5 *
+				((100vw - 320px) / 448)
+		);
+    border: 2px solid transparent;
+    font-size: calc(
+			12px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			15px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .inputs-modal__input input::-webkit-input-placeholder {
+    font-size: calc(
+			12px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			15px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .inputs-modal__input input::-moz-placeholder {
+    font-size: calc(
+			12px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			15px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .inputs-modal__input input:-ms-input-placeholder {
+    font-size: calc(
+			12px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			15px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .inputs-modal__input input::-ms-input-placeholder {
+    font-size: calc(
+			12px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			15px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .inputs-modal__input input::placeholder {
+    font-size: calc(
+			12px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			15px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .inputs-modal__input input:focus {
+    border: 2px solid #1b2f52;
+  }
+
+  .input-checkbox label {
+    font-size: calc(
+			12px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			15px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .buttons-modal {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    max-width: calc(
+			260px +
+				60 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .buttons-modal__button {
+    max-width: calc(
+			110px +
+				30 *
+				((100vw - 320px) / 448)
+		);
+    padding-top: calc(
+			7px +
+				4 *
+				((100vw - 320px) / 448)
+		);
+    padding-bottom: calc(
+			7px +
+				4 *
+				((100vw - 320px) / 448)
+		);
+    font-size: calc(
+			12px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			14px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+  }
+
+  .recovery-modal {
+    font-size: calc(
+			12px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    line-height: calc(
+			15px +
+				2 *
+				((100vw - 320px) / 448)
+		);
+    border-bottom: 1px solid transparent;
+  }
+
   .category {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -4549,6 +4794,86 @@ main {
     width: 300px;
   }
 
+  .modal--visible {
+    row-gap: 25px;
+    width: 300px;
+    height: 300px;
+    margin: 0 10px;
+  }
+
+  .title-modal {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .form-modal {
+    row-gap: 20px;
+    max-width: 260px;
+  }
+
+  .inputs-modal {
+    row-gap: 15px;
+    max-width: 260px;
+  }
+
+  .inputs-modal__input {
+    max-width: 260px;
+  }
+
+  .inputs-modal__input input {
+    max-width: 260px;
+    height: 30px;
+    padding: 7.5px 15px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .inputs-modal__input input::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .inputs-modal__input input::-moz-placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .inputs-modal__input input:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .inputs-modal__input input::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .inputs-modal__input input::placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .input-checkbox label {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .buttons-modal {
+    max-width: 260px;
+  }
+
+  .buttons-modal__button {
+    max-width: 110px;
+    padding: 7px 0;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .recovery-modal {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
   .sublist-footer {
     width: 300px;
   }
@@ -4878,6 +5203,14 @@ main {
   .contacts-header__link svg {
     width: 24px;
     height: 24px;
+  }
+
+  .inputs-modal__input input {
+    border: 1px solid transparent;
+  }
+
+  .inputs-modal__input input:focus {
+    border: 1px solid #1b2f52;
   }
 
   .swiper-pagination {
