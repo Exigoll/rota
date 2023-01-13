@@ -652,13 +652,38 @@
 		height: 425px;
 		@include adaptive-value("border-radius", 20, 10, 1);
 		background-color: $colorLightGray;
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("row-gap", 35, 25, 0);
+			@include adaptive-value-mobile("width", 520, 300, 0);
+			@include adaptive-value-mobile("height", 425, 300, 0);
+			@include adaptive-value-mobile("margin-right", 20, 10, 0);
+			@include adaptive-value-mobile("margin-left", 20, 10, 0);
+		}
+
+		@media (max-width: em(320)) {
+			row-gap: 25px;
+			width: 300px;
+			height: 300px;
+			margin: 0 10px;
+		}
 	}
 }
 
 .title-modal {
 	font-weight: 700;
-	@include adaptive-value-desktop("font-size", 22, 20, 1);
-	@include adaptive-value-desktop("line-height", 27, 24, 1);
+	font-size: 22px;
+	line-height: 27px;
+
+	@media (max-width: em(768)) {
+		@include adaptive-value-mobile("font-size", 22, 18, 0);
+		@include adaptive-value-mobile("line-height", 27, 22, 0);
+	}
+
+	@media (max-width: em(320)) {
+		font-size: 18px;
+		line-height: 22px;
+	}
 }
 
 .form-modal {
@@ -670,6 +695,16 @@
 	max-width: 320px;
 	width: 100%;
 	margin: 0 auto;
+
+	@media (max-width: em(768)) {
+		@include adaptive-value-mobile("row-gap", 30, 20, 0);
+		@include adaptive-value-mobile("max-width", 320, 260, 0);
+	}
+
+	@media (max-width: em(320)) {
+		row-gap: 20px;
+		max-width: 260px;
+	}
 }
 
 .inputs-modal {
@@ -681,6 +716,16 @@
 	max-width: 320px;
 	width: 100%;
 
+	@media (max-width: em(768)) {
+		@include adaptive-value-mobile("row-gap", 20, 15, 0);
+		@include adaptive-value-mobile("max-width", 320, 260, 0);
+	}
+
+	@media (max-width: em(320)) {
+		row-gap: 15px;
+		max-width: 260px;
+	}
+
 	&__input {
 		display: flex;
 		flex-direction: column;
@@ -688,6 +733,14 @@
 		justify-content: center;
 		max-width: 320px;
 		width: 100%;
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("max-width", 320, 260, 0);
+		}
+
+		@media (max-width: em(320)) {
+			max-width: 260px;
+		}
 
 		input {
 			max-width: 320px;
@@ -713,15 +766,58 @@
 				}
 			}
 
+			@media (max-width: em(768)) {
+				@include adaptive-value-mobile("max-width", 320, 260, 0);
+				@include adaptive-value-mobile("height", 40, 30, 0);
+				@include adaptive-value-mobile("padding-top", 10, 7.5, 0);
+				@include adaptive-value-mobile("padding-right", 20, 15, 0);
+				@include adaptive-value-mobile("padding-bottom", 10, 7.5, 0);
+				@include adaptive-value-mobile("padding-left", 20, 15, 0);
+				border: 2px solid transparent;
+				@include adaptive-value-mobile("font-size", 14, 12, 0);
+				@include adaptive-value-mobile("line-height", 17, 15, 0);
+			}
+
+			@media (max-width: em(375)) {
+				border: 1px solid transparent;
+			}
+
+			@media (max-width: em(320)) {
+				max-width: 260px;
+				height: 30px;
+				padding: 7.5px 15px;
+				font-size: 12px;
+				line-height: 15px;
+			}
+
 			&::placeholder {
 				font-weight: 700;
 				font-size: 14px;
 				line-height: 17px;
 				color: $colorBlackPlaceholder;
+
+				@media (max-width: em(768)) {
+					@include adaptive-value-mobile("font-size", 14, 12, 0);
+					@include adaptive-value-mobile("line-height", 17, 15, 0);
+				}
+
+				@media (max-width: em(320)) {
+					font-size: 12px;
+					line-height: 15px;
+				}
 			}
+
 			&:focus {
 				border: 3px solid $colorDarkBlue;
 				box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+
+				@media (max-width: em(768)) {
+					border: 2px solid $colorDarkBlue;
+				}
+
+				@media (max-width: em(375)) {
+					border: 1px solid $colorDarkBlue;
+				}
 			}
 		}
 	}
@@ -735,8 +831,18 @@
 	label {
 		font-weight: 400;
 		font-size: 14px;
-		line-height: 12px;
+		line-height: 17px;
 		cursor: pointer;
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("font-size", 14, 12, 0);
+			@include adaptive-value-mobile("line-height", 17, 15, 0);
+		}
+
+		@media (max-width: em(320)) {
+			font-size: 12px;
+			line-height: 15px;
+		}
 	}
 }
 
@@ -748,6 +854,16 @@
 	max-width: 320px;
 	width: 100%;
 
+	@media (max-width: em(768)) {
+		justify-content: center;
+		column-gap: 20px;
+		@include adaptive-value-mobile("max-width", 320, 260, 0);
+	}
+
+	@media (max-width: em(320)) {
+		max-width: 260px;
+	}
+
 	&__button {
 		display: flex;
 		flex-direction: row;
@@ -755,16 +871,31 @@
 		justify-content: center;
 		max-width: 140px;
 		width: 100%;
-		padding: 10px 0;
+		padding: 11px 0;
 		border: 1px solid transparent;
-		border-radius: 20px;
+		@include adaptive-value("border-radius", 20, 15, 0);
 		color: $colorWhite;
 		font-size: 14px;
-		line-height: 17px;
+		line-height: 16px;
 		font-weight: 500;
 		transition: all 0.5s ease;
 		will-change: transform;
 		cursor: pointer;
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("max-width", 140, 110, 0);
+			@include adaptive-value-mobile("padding-top", 11, 7, 0);
+			@include adaptive-value-mobile("padding-bottom", 11, 7, 0);
+			@include adaptive-value-mobile("font-size", 14, 12, 0);
+			@include adaptive-value-mobile("line-height", 16, 14, 0);
+		}
+
+		@media (max-width: em(320)) {
+			max-width: 110px;
+			padding: 7px 0;
+			font-size: 12px;
+			line-height: 14px;
+		}
 
 		&:active {
 			transform: scale(0.96);
@@ -801,7 +932,7 @@
 	font-family: $fontRoboto;
 	font-weight: 400;
 	font-size: 14px;
-	line-height: 16px;
+	line-height: 17px;
 	transition: all 0.3s ease;
 	will-change: transform;
 
@@ -809,6 +940,17 @@
 		&:hover {
 			border-bottom: 2px solid $colorPeach;
 		}
+	}
+
+	@media (max-width: em(768)) {
+		@include adaptive-value-mobile("font-size", 14, 12, 0);
+		@include adaptive-value-mobile("line-height", 17, 15, 0);
+		border-bottom: 1px solid transparent;
+	}
+
+	@media (max-width: em(320)) {
+		font-size: 12px;
+		line-height: 15px;
 	}
 
 	&:active {
