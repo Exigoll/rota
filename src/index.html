@@ -1,184 +1,244 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-@@include('html/head.html', {
-'title': 'Rota: интернет-магазин автозапчастей'
-})
-<body>
-@@include('html/header.html', {})
-<main class="wrapper">
-	<div class="home">
-		<section class="category">
-			<div class="container">
-				<ul class="category__list">
-					<li class="category__item">
-						<a href="#" class="category__link">
-							<svg>
-								<use xlink:href="./assets/img/icons/icons.svg#category-oil"></use>
-							</svg>
-							<h3>Масла и автохимия</h3>
-						</a>
-					</li>
-					<li class="category__item">
-						<a href="#" class="category__link">
-							<svg>
-								<use xlink:href="./assets/img/icons/icons.svg#category-wheels"></use>
-							</svg>
-							<h3>Резина и диски</h3>
-						</a>
-					</li>
-					<li class="category__item">
-						<a href="#" class="category__link">
-							<svg>
-								<use xlink:href="./assets/img/icons/icons.svg#category-accumulator"></use>
-							</svg>
-							<h3>Аккумуляторы</h3>
-						</a>
-					</li>
-					<li class="category__item">
-						<a href="#" class="category__link">
-							<svg>
-								<use xlink:href="./assets/img/icons/icons.svg#category-wrench"></use>
-							</svg>
-							<h3>Расходники</h3>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section class="info">
-			<div class="container">
-				<div class="swiper info__slider slider-info">
-					<div class="swiper-wrapper slider-info__wrapper">
-						<div class="swiper-slide slider-info__slide">
-							<img src="@img/slider-5.jpg" alt="img-slider">
-							<p>В нашем магазине Вы можете приобрести как оригинальные запчасти, так и недорогие аналоги</p>
-						</div>
-						<div class="swiper-slide slider-info__slide">
-							<img src="@img/slider-6.jpg" alt="img-slider">
-							<p>Осуществляем доставку в любую точку России, а также в страны ближнего зарубежья</p>
-						</div>
-						<div class="swiper-slide slider-info__slide">
-							<img src="@img/slider-1.jpg" alt="img-slider">
-							<p>В нашем магазине Вы можете приобрести шины и диски от лучших производителей в мире</p>
-						</div>
-						<div class="swiper-slide slider-info__slide">
-							<img src="@img/slider-2.jpg" alt="img-slider">
-							<p>Всегда большой ассортимент товаров в наличии, на наших складах в Москве</p>
-						</div>
-						<div class="swiper-slide slider-info__slide">
-							<img src="@img/slider-3.jpg" alt="img-slider">
-							<p>Огромный ассортимент моторных масел из наличия и под заказ</p>
-						</div>
-						<div class="swiper-slide slider-info__slide">
-							<img src="@img/slider-4.jpg" alt="img-slider">
-							<p>Не нашли нужный товар на сайте? Свяжитесь с нами напрямую, и мы поможем с подбором!</p>
+	@@include('html/head.html', { 'title': 'Rota: интернет-магазин автозапчастей'
+	})
+	<body>
+		@@include('html/header.html', {})
+		<main class="wrapper">
+			<div class="home">
+				<section class="category">
+					<div class="container">
+						<ul class="category__list">
+							<li class="category__item">
+								<a href="#" class="category__link">
+									<svg>
+										<use
+											xlink:href="./assets/img/icons/icons.svg#category-oil"
+										></use>
+									</svg>
+									<h3>Масла и автохимия</h3>
+								</a>
+							</li>
+							<li class="category__item">
+								<a href="#" class="category__link">
+									<svg>
+										<use
+											xlink:href="./assets/img/icons/icons.svg#category-wheels"
+										></use>
+									</svg>
+									<h3>Резина и диски</h3>
+								</a>
+							</li>
+							<li class="category__item">
+								<a href="#" class="category__link">
+									<svg>
+										<use
+											xlink:href="./assets/img/icons/icons.svg#category-accumulator"
+										></use>
+									</svg>
+									<h3>Аккумуляторы</h3>
+								</a>
+							</li>
+							<li class="category__item">
+								<a href="#" class="category__link">
+									<svg>
+										<use
+											xlink:href="./assets/img/icons/icons.svg#category-wrench"
+										></use>
+									</svg>
+									<h3>Расходники</h3>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="info">
+					<div class="container">
+						<div class="swiper info__slider slider-info">
+							<div class="swiper-wrapper slider-info__wrapper">
+								<div class="swiper-slide slider-info__slide">
+									<img src="@img/slider-5.jpg" alt="img-slider" />
+									<p>
+										В нашем магазине Вы можете приобрести как оригинальные
+										запчасти, так и недорогие аналоги
+									</p>
+								</div>
+								<div class="swiper-slide slider-info__slide">
+									<img src="@img/slider-6.jpg" alt="img-slider" />
+									<p>
+										Осуществляем доставку в любую точку России, а также в страны
+										ближнего зарубежья
+									</p>
+								</div>
+								<div class="swiper-slide slider-info__slide">
+									<img src="@img/slider-1.jpg" alt="img-slider" />
+									<p>
+										В нашем магазине Вы можете приобрести шины и диски от лучших
+										производителей в мире
+									</p>
+								</div>
+								<div class="swiper-slide slider-info__slide">
+									<img src="@img/slider-2.jpg" alt="img-slider" />
+									<p>
+										Всегда большой ассортимент товаров в наличии, на наших
+										складах в Москве
+									</p>
+								</div>
+								<div class="swiper-slide slider-info__slide">
+									<img src="@img/slider-3.jpg" alt="img-slider" />
+									<p>
+										Огромный ассортимент моторных масел из наличия и под заказ
+									</p>
+								</div>
+								<div class="swiper-slide slider-info__slide">
+									<img src="@img/slider-4.jpg" alt="img-slider" />
+									<p>
+										Не нашли нужный товар на сайте? Свяжитесь с нами напрямую, и
+										мы поможем с подбором!
+									</p>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
 						</div>
 					</div>
-					<div class="swiper-pagination"></div>
-				</div>
+				</section>
+				<section class="news">
+					<div class="container">
+						<h2 class="news__title title">Новости компании</h2>
+						<ul class="news__list">
+							<li class="news__item item-news">
+								<div class="item-news__img">
+									<img src="@img/slider-3.jpg" alt="img" />
+								</div>
+								<div class="item-news__content content-news">
+									<h3 class="content-news__title">Скидка на масла Shell 25%</h3>
+									<p class="content-news__text">
+										Уважаемые Клиенты! У нас отличные новости, компания Shell
+										предоставила скидку в размере 25%Уважаемые Клиенты! У нас
+										отличные новости, компания Shell предоставила скидку в
+										размере 25%Уважаемые Клиенты! У нас отличные новости,
+										компания Shell предоставила скидку в размере 25%Уважаемые
+										Клиенты! У нас отличные новости, компания Shell предоставила
+										скидку в размере 25%ые новости, компания Shell предоставила
+										скидку в размере 25%Уважаемые Клиенты! У нас отличные
+										новости, компания Shell предоставила скидку в размере 25%ые
+										новости, компания Shell предоставила скидку в размере
+										25%Уважаемые Клиенты! У нас отличные новости, компания Shell
+										предоставила скидку в размере 25%ые новости, компания Shell
+										предоставила скидку в размере 25%Уважаемые Клиенты! У нас
+										отличные новости, компания Shell предоставила скидку в
+										размере 25%ые новости, компания Shell предоставила скидку в
+										размере 25%Уважаемые Клиенты! У нас отличные новости,
+										компания Shell предоставила скидку в размере 25%
+									</p>
+									<div class="content-news__extra extra-news">
+										<p class="extra-news__date">25.10.2022</p>
+										<a class="extra-news__link" href="#">Подробнее</a>
+									</div>
+								</div>
+							</li>
+							<li class="news__item item-news">
+								<div class="item-news__img">
+									<img src="@img/slider-4.jpg" alt="img" />
+								</div>
+								<div class="item-news__content content-news">
+									<h3 class="content-news__title">
+										Новый склад в г. Ярославль
+									</h3>
+									<p class="content-news__text">
+										Уважаемые Клиенты, информируем Вас о том, что в Ярославле
+										открылся наш новый склад!
+									</p>
+									<div class="content-news__extra extra-news">
+										<p class="extra-news__date">25.10.2022</p>
+										<a class="extra-news__link" href="#">Подробнее</a>
+									</div>
+								</div>
+							</li>
+							<li class="news__item item-news">
+								<div class="item-news__img">
+									<img src="@img/slider-1.jpg" alt="img" />
+								</div>
+								<div class="item-news__content content-news">
+									<h3 class="content-news__title">Зимняя резина Yokohama</h3>
+									<p class="content-news__text">
+										Уважаемые Клиенты, спешим Вас обрадовать! На наших складах
+										появилась зимняя резина Yokohama. До 31 декабря 2022 года,
+										Вы можете приобрести резину с 20% скидкой, либо выбрать
+										бесплатную доставку.
+									</p>
+									<div class="content-news__extra extra-news">
+										<p class="extra-news__date">25.10.2022</p>
+										<a class="extra-news__link" href="#">Подробнее</a>
+									</div>
+								</div>
+							</li>
+							<li class="news__item item-news">
+								<div class="item-news__img">
+									<img src="@img/slider-1.jpg" alt="img" />
+								</div>
+								<div class="item-news__content content-news">
+									<h3 class="content-news__title">Зимняя резина Yokohama</h3>
+									<p class="content-news__text">
+										Уважаемые Клиенты, спешим Вас обрадовать! На наших складах
+										появилась зимняя резина Yokohama. До 31 декабря 2022 года,
+										Вы можете приобрести резину с 20% скидкой, либо выбрать
+										бесплатную доставку.
+									</p>
+									<div class="content-news__extra extra-news">
+										<p class="extra-news__date">25.10.2022</p>
+										<a class="extra-news__link" href="#">Подробнее</a>
+									</div>
+								</div>
+							</li>
+							<li class="news__item item-news">
+								<div class="item-news__img">
+									<img src="@img/slider-1.jpg" alt="img" />
+								</div>
+								<div class="item-news__content content-news">
+									<h3 class="content-news__title">Зимняя резина Yokohama</h3>
+									<p class="content-news__text">
+										Уважаемые Клиенты, спешим Вас обрадовать! На наших складах
+										появилась зимняя резина Yokohama. До 31 декабря 2022 года,
+										Вы можете приобрести резину с 20% скидкой, либо выбрать
+										бесплатную доставку.
+									</p>
+									<div class="content-news__extra extra-news">
+										<p class="extra-news__date">25.10.2022</p>
+										<a class="extra-news__link" href="#">Подробнее</a>
+									</div>
+								</div>
+							</li>
+							<li class="news__item item-news">
+								<div class="item-news__img">
+									<img src="@img/slider-1.jpg" alt="img" />
+								</div>
+								<div class="item-news__content content-news">
+									<h3 class="content-news__title">Зимняя резина Yokohama</h3>
+									<p class="content-news__text">
+										Уважаемые Клиенты, спешим Вас обрадовать! На наших складах
+										появилась зимняя резина Yokohama. До 31 декабря 2022 года,
+										Вы можете приобрести резину с 20% скидкой, либо выбрать
+										бесплатную доставку.
+									</p>
+									<div class="content-news__extra extra-news">
+										<p class="extra-news__date">25.10.2022</p>
+										<a class="extra-news__link" href="#">Подробнее</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<a class="news__link link-news" href="./news.html">
+							<p>Все новости</p>
+							<svg>
+								<use href="./assets/img/icons/icons.svg#news-arrow"></use>
+							</svg>
+						</a>
+					</div>
+				</section>
 			</div>
-		</section>
-		<section class="news">
-			<div class="container">
-				<h2 class="news__title title">Новости компании</h2>
-				<ul class="news__list">
-					<li class="news__item item-news">
-						<div class="item-news__img">
-							<img src="@img/slider-3.jpg" alt="img">
-						</div>
-						<div class="item-news__content content-news">
-							<h4 class="content-news__title">Скидка на масла Shell 25%</h4>
-							<p class="content-news__text">Уважаемые Клиенты! У нас отличные новости, компания Shell предоставила скидку в размере 25%Уважаемые Клиенты! У нас отличные новости, компания Shell предоставила скидку в размере 25%Уважаемые Клиенты! У нас отличные новости, компания Shell предоставила скидку в размере 25%Уважаемые Клиенты! У нас отличные новости, компания Shell предоставила скидку в размере 25%ые новости, компания Shell предоставила скидку в размере 25%Уважаемые Клиенты! У нас отличные новости, компания Shell предоставила скидку в размере 25%ые новости, компания Shell предоставила скидку в размере 25%Уважаемые Клиенты! У нас отличные новости, компания Shell предоставила скидку в размере 25%ые новости, компания Shell предоставила скидку в размере 25%Уважаемые Клиенты! У нас отличные новости, компания Shell предоставила скидку в размере 25%ые новости, компания Shell предоставила скидку в размере 25%Уважаемые Клиенты! У нас отличные новости, компания Shell предоставила скидку в размере 25%</p>
-							<div class="content-news__extra extra-news">
-								<p class="extra-news__date">25.10.2022</p>
-								<a class="extra-news__link" href="#">Подробнее</a>
-							</div>
-						</div>
-					</li>
-					<li class="news__item item-news">
-						<div class="item-news__img">
-							<img src="@img/slider-4.jpg" alt="img">
-						</div>
-						<div class="item-news__content content-news">
-							<h4 class="content-news__title">Новый склад в г. Ярославль</h4>
-							<p class="content-news__text">Уважаемые Клиенты, информируем Вас о том, что в Ярославле открылся наш
-								новый склад!</p>
-							<div class="content-news__extra extra-news">
-								<p class="extra-news__date">25.10.2022</p>
-								<a class="extra-news__link" href="#">Подробнее</a>
-							</div>
-						</div>
-					</li>
-					<li class="news__item item-news">
-						<div class="item-news__img">
-							<img src="@img/slider-1.jpg" alt="img">
-						</div>
-						<div class="item-news__content content-news">
-							<h4 class="content-news__title">Зимняя резина Yokohama</h4>
-							<p class="content-news__text">Уважаемые Клиенты, спешим Вас обрадовать! На наших складах появилась
-								зимняя резина Yokohama. До 31 декабря 2022 года, Вы можете приобрести резину с 20% скидкой, либо
-								выбрать бесплатную доставку.</p>
-							<div class="content-news__extra extra-news">
-								<p class="extra-news__date">25.10.2022</p>
-								<a class="extra-news__link" href="#">Подробнее</a>
-							</div>
-						</div>
-					</li>
-					<li class="news__item item-news">
-						<div class="item-news__img">
-							<img src="@img/slider-1.jpg" alt="img">
-						</div>
-						<div class="item-news__content content-news">
-							<h4 class="content-news__title">Зимняя резина Yokohama</h4>
-							<p class="content-news__text">Уважаемые Клиенты, спешим Вас обрадовать! На наших складах появилась
-								зимняя резина Yokohama. До 31 декабря 2022 года, Вы можете приобрести резину с 20% скидкой, либо
-								выбрать бесплатную доставку.</p>
-							<div class="content-news__extra extra-news">
-								<p class="extra-news__date">25.10.2022</p>
-								<a class="extra-news__link" href="#">Подробнее</a>
-							</div>
-						</div>
-					</li>
-					<li class="news__item item-news">
-						<div class="item-news__img">
-							<img src="@img/slider-1.jpg" alt="img">
-						</div>
-						<div class="item-news__content content-news">
-							<h4 class="content-news__title">Зимняя резина Yokohama</h4>
-							<p class="content-news__text">Уважаемые Клиенты, спешим Вас обрадовать! На наших складах появилась
-								зимняя резина Yokohama. До 31 декабря 2022 года, Вы можете приобрести резину с 20% скидкой, либо
-								выбрать бесплатную доставку.</p>
-							<div class="content-news__extra extra-news">
-								<p class="extra-news__date">25.10.2022</p>
-								<a class="extra-news__link" href="#">Подробнее</a>
-							</div>
-						</div>
-					</li>
-					<li class="news__item item-news">
-						<div class="item-news__img">
-							<img src="@img/slider-1.jpg" alt="img">
-						</div>
-						<div class="item-news__content content-news">
-							<h4 class="content-news__title">Зимняя резина Yokohama</h4>
-							<p class="content-news__text">Уважаемые Клиенты, спешим Вас обрадовать! На наших складах появилась
-								зимняя резина Yokohama. До 31 декабря 2022 года, Вы можете приобрести резину с 20% скидкой, либо
-								выбрать бесплатную доставку.</p>
-							<div class="content-news__extra extra-news">
-								<p class="extra-news__date">25.10.2022</p>
-								<a class="extra-news__link" href="#">Подробнее</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-				<a class="news__link link-news" href="./news.html">
-					<p>Все новости</p>
-					<svg><use href="./assets/img/icons/icons.svg#news-arrow"></use></svg>
-				</a>
-			</div>
-		</section>
-	</div>
-</main>
-@@include('html/footer.html', {})
-<script src="js/app.min.js"></script>
-</body>
+		</main>
+		@@include('html/footer.html', {})
+		<script src="js/app.min.js"></script>
+	</body>
 </html>

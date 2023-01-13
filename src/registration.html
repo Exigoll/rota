@@ -1,16 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-@@include('html/head.html', {
-'title': 'Регистрация'
-})
-<body>
-@@include('html/header.html', {})
-<main class="wrapper">
-	<section class="registration">
-		registration
-	</section>
-</main>
-@@include('html/footer.html', {})
-<script src='js/app.min.js'></script>
-</body>
+	@@include('html/head.html', { 'title': 'Регистрация' })
+	<body>
+		@@include('html/header.html', {})
+		<main class="wrapper">
+			<section class="registration">
+				<div class="container">
+					<div class="registration__wrapper">
+						<div class="registration__title title-registration">
+							Регистрация
+						</div>
+						<form class="registration__form form-registration">
+							<div class="form-registration__inputs inputs-registration">
+								<div
+									class="inputs-registration__input input-registration input-registration--email"
+								>
+									<label for="registration-email">E-mail <span>*</span></label>
+									<input
+										type="email"
+										name="registration-email"
+										id="registration-email"
+										placeholder="Введите e-mail"
+									/>
+								</div>
+								<div
+									class="inputs-registration__input input-registration input-registration--name"
+								>
+									<label for="registration-name">Ф.И.О. <span>*</span></label>
+									<input
+										type="name"
+										name="registration-name"
+										id="registration-name"
+										placeholder="Введите Ф.И.О."
+									/>
+								</div>
+								<div
+									class="inputs-registration__input input-registration input-registration--tel"
+								>
+									<label for="registration-tel"
+										>Номер телефона <span>*</span></label
+									>
+									<input
+										type="tel"
+										name="registration-tel"
+										id="registration-tel"
+										placeholder="Введите номер телефона"
+									/>
+								</div>
+								<div
+									class="inputs-registration__input input-registration input-registration--tel"
+								>
+									<label for="registration-tel-additional">
+										Дополнительный номер телефона
+										<span>*</span>
+									</label>
+									<input
+										type="tel"
+										name="registration-tel-additional"
+										id="registration-tel-additional"
+										placeholder="Введите номер телефона"
+									/>
+								</div>
+								<div
+									class="inputs-registration__input input-registration input-registration--organization"
+								>
+									<label for="registration-organization">
+										Организационно-правовая форма
+										<span>*</span>
+									</label>
+									<select
+										name="registration-organization"
+										id="registration-organization"
+									>
+										<option value="0">&#60;Выберите&#62;</option>
+										<option value="1">ООО</option>
+										<option value="2">ИП</option>
+									</select>
+								</div>
+								<div
+									class="inputs-registration__input input-registration input-registration--activity"
+								>
+									<label for="registration-activity">
+										Сфера деятельности
+										<span>*</span>
+									</label>
+									<select
+										name="registration-activity"
+										id="registration-activity"
+									>
+										<option value="0">&#60;Выберите&#62;</option>
+										<option value="1">Интернет-магазин</option>
+										<option value="2">СТО</option>
+										<option value="3">Розничный магазин</option>
+										<option value="4">Прочее</option>
+									</select>
+								</div>
+								<div
+									class="inputs-registration__input input-registration input-registration--login"
+								>
+									<label for="registration-login">
+										Логин (имя пользователя)
+										<span>*</span>
+									</label>
+									<input
+										type="text"
+										name="registration-login"
+										id="registration-login"
+										placeholder="Введите логин (имя пользователя)"
+									/>
+								</div>
+								<div
+									class="inputs-registration__input input-registration input-registration--password"
+								>
+									<label for="registration-password">
+										Пароль
+										<span>*</span></label
+									>
+									<input
+										type="password"
+										name="registration-password"
+										id="registration-password"
+										placeholder="Введите пароль"
+									/>
+								</div>
+								<div
+									class="inputs-registration__input input-registration input-registration--password"
+								>
+									<label for="registration-password-repeated">
+										Повторите пароль
+										<span>*</span>
+									</label>
+									<input
+										type="password"
+										name="registration-password-repeated"
+										id="registration-password-repeated"
+										placeholder="Введите пароль"
+									/>
+								</div>
+								<div
+									class="inputs-registration__input input-registration input-registration--delivery"
+								>
+									<label for="registration-delivery">
+										Адрес доставки
+										<span>*</span>
+									</label>
+									<input
+										type="text"
+										name="registration-delivery"
+										id="registration-delivery"
+										placeholder="Индекс, регион, город, улица, № помещения"
+									/>
+								</div>
+								<div class="form-registration__checkbox checkbox-registration">
+									<div class="checkbox-registration__check check-registration">
+										<label for="registration-checkbox-data">
+											Согласие на обработку перс. данных
+										</label>
+										<input
+											type="checkbox"
+											name="registration-checkbox-data"
+											id="registration-checkbox-data"
+										/>
+									</div>
+									<div class="checkbox-registration__check check-registration">
+										<label for="registration-checkbox-confirm">
+											Подтверждение регистрации
+										</label>
+										<input
+											type="checkbox"
+											name="registration-checkbox-confirm"
+											id="registration-checkbox-confirm"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="form-registration__buttons buttons-registration">
+								<button
+									class="buttons-registration__button button-registration"
+								>
+									Регистрация
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html', {})
+		<script src="js/app.min.js"></script>
+	</body>
 </html>
