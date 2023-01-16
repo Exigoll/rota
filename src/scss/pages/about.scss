@@ -1,13 +1,26 @@
 .about {
-	max-width: 50%;
-	margin: 0 auto;
-	padding-top: 50px;
-
 	&__content {
 		display: flex;
 		flex-direction: column;
 		row-gap: 20px;
-		font-size: 20px;
+		font-family: $fontRoboto;
+		@include adaptive-value-desktop("font-size", 24, 20, 1);
+		@include adaptive-value-desktop("line-height", 28, 23, 1);
 		text-align: justify;
+
+		@media (max-width: em(1024)) {
+			@include adaptive-value-tablet("font-size", 20, 18, 0);
+			@include adaptive-value-tablet("line-height", 23, 21, 0);
+		}
+
+		@media (max-width: em(768)) {
+			@include adaptive-value-mobile("font-size", 18, 14, 0);
+			@include adaptive-value-mobile("line-height", 21, 16, 0);
+		}
+
+		@media (max-width: em(320)) {
+			font-size: 14px;
+			line-height: 16px;
+		}
 	}
 }

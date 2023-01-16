@@ -1,7 +1,4 @@
 .registration {
-	@include adaptive-value("padding-top", 50, 30, 1);
-	@include adaptive-value("padding-bottom", 50, 30, 1);
-
 	&__wrapper {
 		@include adaptive-value("padding-top", 50, 30, 1);
 		@include adaptive-value("padding-bottom", 50, 30, 1);
