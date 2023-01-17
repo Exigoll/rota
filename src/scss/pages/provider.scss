@@ -1,0 +1,55 @@
+.content-provider {
+	display: flex;
+	flex-direction: column;
+	@include adaptive-value("row-gap", 50, 30, 1);
+	font-family: $fontRoboto;
+}
+
+.list-provider {
+	display: flex;
+	flex-direction: column;
+	@include adaptive-value("row-gap", 20, 10, 1);
+
+	&__title {
+		font-family: $fontMontserrat;
+		font-weight: 700;
+		@include adaptive-value("font-size", 22, 16, 1);
+		@include adaptive-value("line-height", 24, 20, 1);
+	}
+}
+
+.sublist-provider {
+	display: flex;
+	flex-direction: column;
+	@include adaptive-value("row-gap", 20, 15, 1);
+
+	&__item {
+		display: flex;
+		align-items: center;
+		@include adaptive-value("column-gap", 15, 10, 1);
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			@include adaptive-value("max-width", 30, 24, 1);
+			@include adaptive-value("height", 30, 24, 1);
+			@include adaptive-value("font-size", 20, 14, 1);
+			@include adaptive-value("line-height", 20, 14, 1);
+			border-radius: 5px;
+			color: $colorWhite;
+			background-color: $colorLightDark;
+		}
+	}
+}
+
+.sublist-provider__item p,
+.additionally-provider {
+	@include adaptive-value("font-size", 20, 14, 1);
+	@include adaptive-value("line-height", 24, 17, 1);
+}
+
+.additionally-provider {
+	font-weight: 700;
+}
