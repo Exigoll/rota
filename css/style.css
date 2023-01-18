@@ -1419,8 +1419,7 @@ main {
   row-gap: 20px;
   font-family: "Roboto", sans-serif;
   text-align: justify;
-  font-size: 20px;
-  line-height: 30px;
+  text-indent: 50px;
   font-size: 20px;
   line-height: 30px;
 }
@@ -1768,8 +1767,133 @@ main {
   line-height: 24px;
 }
 
+.sublist-provider__item p a,
+.additionally-provider a {
+  color: #e77c58;
+}
+
 .additionally-provider {
   font-weight: 700;
+}
+
+.wholesale {
+  font-family: "Roboto", sans-serif;
+}
+
+.content-wholesale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 50px;
+  font-family: "Roboto", sans-serif;
+}
+
+.info-wholesale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+.info-wholesale__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.info-wholesale__text {
+  text-align: justify;
+  text-indent: 50px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.info-wholesale__text a {
+  color: #e77c58;
+}
+
+.documents-wholesale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.documents-wholesale__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.documents-wholesale__text {
+  text-align: justify;
+  text-indent: 50px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.list-documents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+.list-documents__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.list-documents__item span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #2e3536;
+}
+
+.list-documents__item p {
+  font-size: 20px;
+  line-height: 24px;
+  text-align: justify;
 }
 
 .header {
@@ -3035,6 +3159,13 @@ main {
   }
 
   .about__content {
+    text-indent: calc(
+				30px + 20 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .about__content {
     font-size: calc(
 				14px + 6 *
 					((100vw - 320px) / 1155)
@@ -3045,20 +3176,6 @@ main {
     line-height: calc(
 				20px + 10 *
 					((100vw - 320px) / 1155)
-			);
-  }
-
-  .about__content {
-    font-size: calc(
-				18px + 2 *
-					((100vw - 1024px) / 451)
-			);
-  }
-
-  .about__content {
-    line-height: calc(
-				26px + 4 *
-					((100vw - 1024px) / 451)
 			);
   }
 
@@ -3171,6 +3288,161 @@ main {
 
   .sublist-provider__item p,
   .additionally-provider {
+    line-height: calc(
+				17px + 7 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .content-wholesale {
+    row-gap: calc(
+				30px + 20 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .info-wholesale {
+    row-gap: calc(
+				10px + 10 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .info-wholesale__title {
+    font-size: calc(
+				16px + 6 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .info-wholesale__title {
+    line-height: calc(
+				20px + 4 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .info-wholesale__text {
+    text-indent: calc(
+				30px + 20 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .info-wholesale__text {
+    font-size: calc(
+				14px + 6 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .info-wholesale__text {
+    line-height: calc(
+				20px + 10 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .documents-wholesale {
+    row-gap: calc(
+				15px + 5 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .documents-wholesale__title {
+    font-size: calc(
+				14px + 6 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .documents-wholesale__title {
+    line-height: calc(
+				19px + 3 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .documents-wholesale__text {
+    text-indent: calc(
+				30px + 20 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .documents-wholesale__text {
+    font-size: calc(
+				14px + 6 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .documents-wholesale__text {
+    line-height: calc(
+				20px + 10 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .list-documents {
+    row-gap: calc(
+				10px + 10 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .list-documents__item {
+    -webkit-column-gap: calc(
+				10px + 5 *
+					((100vw - 320px) / 1155)
+			);
+       -moz-column-gap: calc(
+				10px + 5 *
+					((100vw - 320px) / 1155)
+			);
+            column-gap: calc(
+				10px + 5 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .list-documents__item span {
+    max-width: calc(
+				24px + 6 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .list-documents__item span {
+    height: calc(
+				24px + 6 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .list-documents__item span {
+    font-size: calc(
+				14px + 6 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .list-documents__item span {
+    line-height: calc(
+				14px + 6 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .list-documents__item p {
+    font-size: calc(
+				14px + 6 *
+					((100vw - 320px) / 1155)
+			);
+  }
+
+  .list-documents__item p {
     line-height: calc(
 				17px + 7 *
 					((100vw - 320px) / 1155)
