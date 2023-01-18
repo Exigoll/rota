@@ -1,11 +1,15 @@
-.content-provider {
+.wholesale {
+	font-family: $fontRoboto;
+}
+
+.content-wholesale {
 	display: flex;
 	flex-direction: column;
 	@include adaptive-value("row-gap", 50, 30, 1);
 	font-family: $fontRoboto;
 }
 
-.list-provider {
+.info-wholesale {
 	display: flex;
 	flex-direction: column;
 	@include adaptive-value("row-gap", 20, 10, 1);
@@ -16,12 +20,44 @@
 		@include adaptive-value("font-size", 22, 16, 1);
 		@include adaptive-value("line-height", 24, 20, 1);
 	}
+
+	&__text {
+		text-align: justify;
+		@include adaptive-value("text-indent", 50, 30, 1);
+		@include adaptive-value("font-size", 20, 14, 1);
+		@include adaptive-value("line-height", 30, 20, 1);
+
+		a {
+			color: $colorPeach;
+		}
+	}
 }
 
-.sublist-provider {
+.documents-wholesale {
 	display: flex;
 	flex-direction: column;
 	@include adaptive-value("row-gap", 20, 15, 1);
+	width: 90%;
+	margin: 0 auto;
+
+	&__title {
+		font-weight: 700;
+		@include adaptive-value("font-size", 20, 14, 1);
+		@include adaptive-value("line-height", 22, 19, 1);
+	}
+
+	&__text {
+		text-align: justify;
+		@include adaptive-value("text-indent", 50, 30, 1);
+		@include adaptive-value("font-size", 20, 14, 1);
+		@include adaptive-value("line-height", 30, 20, 1);
+	}
+}
+
+.list-documents {
+	display: flex;
+	flex-direction: column;
+	@include adaptive-value("row-gap", 20, 10, 1);
 
 	&__item {
 		display: flex;
@@ -41,19 +77,11 @@
 			color: $colorWhite;
 			background-color: $colorLightDark;
 		}
+
+		p {
+			@include adaptive-value("font-size", 20, 14, 1);
+			@include adaptive-value("line-height", 24, 17, 1);
+			text-align: justify;
+		}
 	}
-}
-
-.sublist-provider__item p,
-.additionally-provider {
-	@include adaptive-value("font-size", 20, 14, 1);
-	@include adaptive-value("line-height", 24, 17, 1);
-
-	a {
-		color: $colorPeach;
-	}
-}
-
-.additionally-provider {
-	font-weight: 700;
 }
