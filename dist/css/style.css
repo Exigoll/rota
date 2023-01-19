@@ -1446,6 +1446,7 @@ main {
 .btn--transparent {
   background-color: transparent;
   color: #2e3536;
+  cursor: default;
 }
 
 .btn--blue {
@@ -2953,9 +2954,8 @@ main {
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
-  width: 140px;
+  width: 100%;
   margin-top: 20px;
-  margin-left: auto;
   will-change: transform;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

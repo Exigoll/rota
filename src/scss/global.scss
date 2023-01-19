@@ -187,6 +187,7 @@ main {
 	&--transparent {
 		background-color: transparent;
 		color: $colorLightDark;
+		cursor: default;
 	}
 
 	&--blue {
