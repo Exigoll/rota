@@ -1367,6 +1367,16 @@ main {
           flex: 1 1 auto;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #2e3536;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e77c58;
+  border-radius: 5px;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

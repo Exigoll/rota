@@ -67,6 +67,16 @@ main {
 	flex: 1 1 auto;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: $colorLightDark;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $colorPeach;
+	border-radius: 5px;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
