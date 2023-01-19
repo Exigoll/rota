@@ -109,21 +109,6 @@
 			color: red;
 		}
 	}
-	input,
-	select {
-		padding-right: 20px;
-		padding-left: 15px;
-
-		@media (max-width: em(768)) {
-			@include adaptive-value-mobile("padding-right", 20, 15, 0);
-			@include adaptive-value-mobile("padding-left", 20, 15, 0);
-		}
-
-		@media (max-width: em(320)) {
-			padding-right: 15px;
-			padding-left: 15px;
-		}
-	}
 
 	input {
 		padding-top: 10px;
@@ -151,6 +136,10 @@
 			font-size: 12px;
 			line-height: 15px;
 		}
+	}
+
+	select {
+		cursor: pointer;
 	}
 
 	input,
@@ -204,7 +193,7 @@
 			font-weight: 700;
 			font-size: 14px;
 			line-height: 17px;
-			color: $colorBlackPlaceholder;
+			color: $colorPlaceholder;
 
 			@media (max-width: em(768)) {
 				@include adaptive-value-mobile("font-size", 14, 12, 0);
@@ -278,52 +267,5 @@
 
 	@media (max-width: em(320)) {
 		max-width: 260px;
-	}
-}
-
-.button-registration {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	max-width: 140px;
-	width: 100%;
-	padding: 11px 0;
-	border: 1px solid transparent;
-	@include adaptive-value("border-radius", 20, 15, 0);
-	background-color: $colorPeach;
-	color: $colorWhite;
-	font-size: 14px;
-	line-height: 16px;
-	font-weight: 500;
-	transition: all 0.5s ease;
-	will-change: transform;
-	cursor: pointer;
-
-	@media (max-width: em(768)) {
-		@include adaptive-value-mobile("max-width", 140, 110, 0);
-		@include adaptive-value-mobile("padding-top", 11, 7, 0);
-		@include adaptive-value-mobile("padding-bottom", 11, 7, 0);
-		@include adaptive-value-mobile("font-size", 14, 12, 0);
-		@include adaptive-value-mobile("line-height", 16, 14, 0);
-	}
-
-	@media (max-width: em(320)) {
-		max-width: 110px;
-		padding: 7px 0;
-		font-size: 12px;
-		line-height: 14px;
-	}
-
-	@media (min-width: em(769)) {
-		&:hover {
-			border: 1px solid $colorPeach;
-			background-color: $colorWhite;
-			color: $colorLightDark;
-		}
-	}
-
-	&:active {
-		transform: scale(0.96);
 	}
 }

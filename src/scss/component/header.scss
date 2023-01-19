@@ -250,7 +250,7 @@
 }
 
 .bottom-header {
-	background-color: $colorLightGray;
+	background-color: $colorGray;
 
 	&__container {
 		display: flex;
@@ -450,7 +450,7 @@
 			font-weight: 700;
 			font-size: 16px;
 			line-height: 19px;
-			color: $colorBlackPlaceholder;
+			color: $colorPlaceholder;
 
 			@media (max-width: em(1024)) {
 				@include adaptive-value-tablet("font-size", 16, 14, 1);
@@ -494,7 +494,7 @@
 
 		@media (min-width: em(769)) {
 			&:hover {
-				background-color: $colorPeachActive;
+				background-color: #f76435;
 			}
 		}
 
@@ -651,7 +651,7 @@
 		width: 520px;
 		height: 425px;
 		@include adaptive-value("border-radius", 20, 10, 1);
-		background-color: $colorLightGray;
+		background-color: $colorGray;
 
 		@media (max-width: em(768)) {
 			@include adaptive-value-mobile("row-gap", 35, 25, 0);
@@ -794,7 +794,7 @@
 				font-weight: 700;
 				font-size: 14px;
 				line-height: 17px;
-				color: $colorBlackPlaceholder;
+				color: $colorPlaceholder;
 
 				@media (max-width: em(768)) {
 					@include adaptive-value-mobile("font-size", 14, 12, 0);
@@ -862,68 +862,6 @@
 
 	@media (max-width: em(320)) {
 		max-width: 260px;
-	}
-
-	&__button {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		max-width: 140px;
-		width: 100%;
-		padding: 11px 0;
-		border: 1px solid transparent;
-		@include adaptive-value("border-radius", 20, 15, 0);
-		color: $colorWhite;
-		font-size: 14px;
-		line-height: 16px;
-		font-weight: 500;
-		transition: all 0.5s ease;
-		will-change: transform;
-		cursor: pointer;
-
-		@media (max-width: em(768)) {
-			@include adaptive-value-mobile("max-width", 140, 110, 0);
-			@include adaptive-value-mobile("padding-top", 11, 7, 0);
-			@include adaptive-value-mobile("padding-bottom", 11, 7, 0);
-			@include adaptive-value-mobile("font-size", 14, 12, 0);
-			@include adaptive-value-mobile("line-height", 16, 14, 0);
-		}
-
-		@media (max-width: em(320)) {
-			max-width: 110px;
-			padding: 7px 0;
-			font-size: 12px;
-			line-height: 14px;
-		}
-
-		&:active {
-			transform: scale(0.96);
-		}
-
-		&--registration {
-			background-color: $colorPeach;
-
-			@media (min-width: em(769)) {
-				&:hover {
-					border: 1px solid $colorPeach;
-					background-color: $colorWhite;
-					color: $colorLightDark;
-				}
-			}
-		}
-
-		&--auth {
-			background-color: $colorDarkBlue;
-
-			@media (min-width: em(769)) {
-				&:hover {
-					border: 1px solid $colorDarkBlue;
-					background-color: $colorWhite;
-					color: $colorLightDark;
-				}
-			}
-		}
 	}
 }
 

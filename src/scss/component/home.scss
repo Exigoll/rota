@@ -448,59 +448,6 @@
 	@media (max-width: em(768)) {
 		justify-content: space-between;
 	}
-
-	&__date,
-	&__link {
-		padding: 12px 44px;
-		@include adaptive-value("border-radius", 20, 10, 1);
-		color: $colorBlack;
-		will-change: transform;
-
-		@media (max-width: em(1024)) {
-			@include adaptive-value-tablet("padding-top", 12, 8, 1);
-			@include adaptive-value-tablet("padding-right", 44, 34, 1);
-			@include adaptive-value-tablet("padding-bottom", 12, 8, 1);
-			@include adaptive-value-tablet("padding-left", 44, 34, 1);
-			@include adaptive-value-tablet("font-size", 16, 14, 1);
-			@include adaptive-value-tablet("line-height", 19, 17, 1);
-		}
-
-		@media (max-width: em(768)) {
-			@include adaptive-value-mobile("padding-top", 8, 5, 0);
-			@include adaptive-value-mobile("padding-right", 34, 20, 0);
-			@include adaptive-value-mobile("padding-bottom", 8, 5, 0);
-			@include adaptive-value-mobile("padding-left", 34, 20, 0);
-			@include adaptive-value-mobile("font-size", 14, 12, 0);
-			@include adaptive-value-mobile("line-height", 17, 14, 0);
-		}
-
-		@media (max-width: em(320)) {
-			padding: 5px 20px;
-			border-radius: 10px;
-			font-size: 12px;
-			line-height: 14px;
-		}
-	}
-
-	&__link {
-		border: 1px solid transparent;
-		background-color: $colorDarkBlue;
-		color: $colorWhite;
-		transition: all 0.5s ease;
-
-		@media (min-width: em(769)) {
-			&:hover {
-				border: 1px solid $colorDarkBlue;
-				background-color: $colorWhite;
-				color: $colorDarkBlue;
-				transform: scale(0.99);
-			}
-		}
-
-		&:active {
-			transform: scale(0.95);
-		}
-	}
 }
 
 .link-news {

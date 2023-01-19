@@ -167,3 +167,53 @@ main {
 	width: 100%;
 	margin: 0 auto;
 }
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	@include adaptive-value("max-width", 140, 120, 1);
+	@include adaptive-value("height", 40, 30, 1);
+	border: 1px solid transparent;
+	@include adaptive-value("border-radius", 20, 10, 1);
+	@include adaptive-value("font-size", 14, 12, 1);
+	@include adaptive-value("line-height", 14, 12, 1);
+	color: $colorWhite;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	will-change: transform;
+
+	&--transparent {
+		background-color: transparent;
+		color: $colorLightDark;
+	}
+
+	&--blue {
+		background-color: $colorDarkBlue;
+
+		@media (min-width: em(769)) {
+			&:hover {
+				border: 1px solid $colorDarkBlue;
+				background-color: $colorWhite;
+				color: $colorDarkBlue;
+			}
+		}
+	}
+
+	&--peach {
+		background-color: $colorPeach;
+
+		@media (min-width: em(769)) {
+			&:hover {
+				border: 1px solid $colorPeach;
+				background-color: $colorWhite;
+				color: $colorPeach;
+			}
+		}
+	}
+
+	&:active {
+		transform: scale(0.96);
+	}
+}
