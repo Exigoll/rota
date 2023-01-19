@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport"	content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,14 +14,14 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Roboto:wght@300;400&display=swap&_v=20230118060052" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230118060052">
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Roboto:wght@300;400&display=swap&_v=20230119075619" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230119075619">
 	<title>Контакты</title>
 </head>
 
 
-<body>
-<header class="header">
+	<body>
+		<header class="header">
 	<div class="header__top top-header">
 		<div class="top-header__container">
 			<a class="top-header__logo logo-header" href="./">
@@ -146,14 +146,10 @@
 						</div>
 					</div>
 					<div class="form-modal__buttons buttons-modal">
-						<button
-							class="buttons-modal__button buttons-modal__button--registration"
-						>
+						<button class="btn btn--peach">
 							<a href="./registration.html"> Регистрация </a>
 						</button>
-						<button class="buttons-modal__button buttons-modal__button--auth">
-							Вход
-						</button>
+						<button class="btn btn--blue">Вход</button>
 					</div>
 				</form>
 				<a href="#" class="form-modal__recovery recovery-modal">
@@ -164,10 +160,61 @@
 	</div>
 </header>
 
-<main class="wrapper">
-Контакты
-</main>
-<footer class="footer">
+		<main class="wrapper">
+			<section class="page page-other contacts">
+				<div class="container">
+					<h2 class="title contacts__title">Контакты</h2>
+					<div class="contacts__content content-contacts">
+						<div class="content-contacts__info info-contacts">
+							<h3 class="info-contacts__title">Реквизиты компании</h3>
+							<p class="info-contacts__text">
+								Общество с ограниченной ответственностью "РОТА"
+							</p>
+							<p class="info-contacts__text">ИНН: 9715420842</p>
+							<p class="info-contacts__text">КПП: 771501001</p>
+							<p class="info-contacts__text">ОГРН: 1227700333673</p>
+							<p class="info-contacts__text">ОКВЭД 45.31</p>
+							<p class="info-contacts__text">ОКПО 54681502</p>
+						</div>
+						<div class="content-contacts__info info-contacts">
+							<h3 class="info-contacts__title">Реквизиты банка</h3>
+							<p class="info-contacts__text">АО "АЛЬФА-БАНК"</p>
+							<p class="info-contacts__text">БИК: 044525593</p>
+							<p class="info-contacts__text">
+								К/с: 30101810200000000593 ГУ БАНКА РОССИИ ПО ЦФО
+							</p>
+						</div>
+						<div class="content-contacts__info info-contacts">
+							<h3 class="info-contacts__title">Фактический адрес</h3>
+							<p class="info-contacts__text">
+								г. Москва, ул. Ленина, 32, офис 404, 614055
+							</p>
+						</div>
+						<div class="content-contacts__info info-contacts">
+							<h3 class="info-contacts__title">График работы</h3>
+							<p class="info-contacts__text">Пн-Пт: 09:00-18:00</p>
+							<p class="info-contacts__text">Сб-Вс: выходные</p>
+						</div>
+						<div class="content-contacts__info info-contacts">
+							<h3 class="info-contacts__title">Контакты для связи</h3>
+							<p class="info-contacts__text">
+								E-mail: <a href="mailto:info@rotazap.ru">info@rotazap.ru</a>
+							</p>
+							<p class="info-contacts__text">
+								№ телефона: <a href="tel:+79029999999">+7-902-99-99-999</a>
+							</p>
+						</div>
+						<div class="content-contacts__info info-contacts">
+							<h3 class="info-contacts__title">Руководитель</h3>
+							<p class="info-contacts__text">
+								Генеральный директор: Костюшкин Юрий Владимирович
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
 	<div class="container">
 		<nav class="footer__navigation navigation-footer">
 			<ul class="navigation-footer__list list-footer">
@@ -237,6 +284,6 @@
 	</div>
 </footer>
 
-<script src='js/app.min.js?_v=20230118060052'></script>
-</body>
+		<script src="js/app.min.js?_v=20230119075619"></script>
+	</body>
 </html>
